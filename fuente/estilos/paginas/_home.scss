@@ -1,0 +1,98 @@
+#presentacion {
+  background-color: nth($paleta-colores, 3);
+  color: nth($paleta-colores, 1);
+  box-shadow: 0px 1px 10px black;
+}
+
+.logoPrincipal{
+  width: 50vw;
+}
+
+.btnScroll {
+  margin-top: 5%;
+  z-index: 1;
+}
+
+#parte1 {
+  background-color: nth($paleta-colores, 4);
+  color: nth($paleta-colores, 3);
+}
+
+#parte1,
+#parte2,
+#parte3,
+#parte4 p {
+  font-family: $fuente-texto-secundaria;
+  font-weight: bold;
+  font-size: $clamp-p;
+}
+
+#parte2 {
+  background-color: nth($paleta-colores, 3);
+  color: nth($paleta-colores, 4);
+}
+
+#parte3 {
+  background-color: nth($paleta-colores, 1);
+  color: nth($paleta-colores, 2);
+}
+
+#parte4 {
+  background-color: nth($paleta-colores, 4);
+  color: nth($paleta-colores, 2);
+}
+
+#parte4 button {
+  background-color: nth($paleta-colores, 2);
+  color: nth($paleta-colores, 4);
+  font-size: 20px;
+  border-radius: 10px;
+  border: none;
+  padding: 10px;
+}
+
+#contenido section {
+  height: 100vh;
+}
+
+#contenido section:not(presentacion) article {
+  width: 80vw;
+}
+
+#contenido section:not(presentacion) h1 {
+  font-size: $fuente-texto-primaria;
+  font-size: $clamp-h1;
+}
+
+#parte1 h1 {
+  text-align: left;
+  font-weight: 700;
+  margin: 10px;
+}
+
+#parte2 h1 {
+  text-align: right;
+  font-weight: 700;
+  margin: 10px;
+}
+
+#parte3 h1 {
+  text-align: left;
+  font-weight: 700;
+  margin: 10px;
+}
+
+/************MOVIL*************/
+
+@media screen and (max-width: 800px) {
+  article p {
+    max-width: 100%;
+    text-align: justify;
+  }
+
+  #contenido {
+    min-width: 100%;
+  }
+
+ 
+}
