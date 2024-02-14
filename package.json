@@ -8,7 +8,9 @@
     "parcel:produccion": "parcel build fuente/index.html --public-url './' --dist-dir produccion",
     "limpieza": "rimraf desarrollo produccion parcel->cache",
     "des": "npm run parcel:desarrollo",
-    "prod": "npm-run-all limpieza parcel:produccion"
+    "prod": "npm-run-all limpieza parcel:produccion",
+    "eliminar": "rm -rf .parcel-cache/",
+    "dev": "npm-run-all eliminar des"
   },
   "author": "Alejandro Toral Romero",
   "license": "ISC",

@@ -10,13 +10,14 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-    <script src="script.js" defer></script>
+    <script src="js/script.js" defer></script>
+    <script src="js/animations.js" defer></script>
 </head>
 
 <body>
     <header class="shadow">
 
-        <img src="./img/logo_372px.png" alt="Logo" >
+        <img src="./img/logo_372px.png" alt="Logo">
 
         <button class="abrir-menu" id="abrir"><i class="bi bi-list"></i></button>
 
@@ -24,7 +25,7 @@
             <button class="cerrar-menu" id="cerrar"><i class="bi bi-x-circle-fill"></i></button>
 
             <ul class="lista">
-                <li><a href="">
+                <li><a href="./html/libros.html">
                         <div></div><button>LIBROS</i></button>
                     </a></li>
 
@@ -49,18 +50,12 @@
     <section id="contenido" class="df-column ai-center">
 
 
-        <section id="presentacion" class="width-100 height-100 df-column ai-center jc-center ta-center">
-            <img
-                    srcset="./img/logoVerde.png 1000w,
-                            ./img/logo_372px.png 700w"
+        <section id="presentacion" class="width-100  df-column ai-center jc-center ta-center">
+            <img srcset="./img/logoVerde.png 1000w,
+                            ./img/logo_372px.png 700w" sizes=" (max-width: 499px) 80vw,
+                            (max-width: 799px) 70vw" src="./img/logoVerde.png" class="logoPrincipal" />
 
-                            sizes=" (max-width: 499px) 80vw,
-                            (max-width: 799px) 70vw"
 
-                    src="./img/logoVerde.png"        
-                             class="logoPrincipal"/>
-                    
-            
             <h3>EMPRENDIMIENTO Y DESARROLLO PERSONAL</h3>
             <a class="btnScroll" href="#parte1"><img src="./img/scroll_50px.png" alt="" height="50px"></a>
         </section>
@@ -68,13 +63,51 @@
 
 
         <section id="parte1" class="width-100 df-column jc-center ai-center ta-center">
-            <article>
+            <div id="collage" class="ocultar">
+                <img src="img/libros/book_Elonk_Musk_150px.jpg" alt="" height="150px" id="principal">
+                <img src="img/libros/nunca_te_pares_150px.jpg" alt="" height="150px" id="principal">
+                <img src="img/libros/22_pasos_150px.jpg" alt="" height="150px" id="principal">
+                <img src="img/libros/piensa_y_hagase_rico_150px.jpg" alt="" height="150px" id="principal">
+                <img src="img/libros/padre_rico_padre_pobre_150px.jpg" alt="" height="150px" id="principal">
+                <img src="img/libros/habitos_atomicos_150px.jpg" alt="" height="150px" id="principal">
+                <img src="img/libros/el_monje_que_vendio_150px.jpg" alt="" height="150px" id="principal">
+                <img src="img/libros/el_sutil_arte_150px.jpg" alt="" height="150px" id="principal">
+                <img src="img/libros/steve_jobs_150px.jpg" alt="" height="150px" id="principal">
+                <img src="img/libros/jeff_bezos_150px.jpg" alt="" height="150px" id="principal">
+                <img src="img/libros/el_millonario_de_la_puerta_de_al_lado_150px.jpg" alt="" height="150px" id="principal">
+                <img src="img/libros/el_hombre_mas_rico_de_babilonia_150px.jpg" alt="" height="150px" id="principal">
+                <img src="img/libros/codigo_del_dinero_150px.jpg" alt="" height="150px" id="principal">
+                <img src="img/libros/actitud_salmon_150px.jpg" alt="" height="150px" id="principal">
+                <img src="img/libros/lean_startup_150px.jpg" alt="" height="150px" id="principal">
+                <img src="img/libros/vaca_purpura_150px.jpg" alt="" height="150px" id="principal">
+                <img src="img/libros/codigo_del_dinero_150px.jpg" alt="" height="150px" id="principal">
+                <img src="img/libros/actitud_salmon_150px.jpg" alt="" height="150px" id="principal">
+                <img src="img/libros/lean_startup_150px.jpg" alt="" height="150px" id="principal">
+                <img src="img/libros/vaca_purpura_150px.jpg" alt="" height="150px" id="principal">
+                
+
+                
+
+            </div>
+
+      <div id="degradado"></div>      
+            
+            <article class="ocultar">
+                
+                <i class="bi bi-book icon"></i>
+                
+
+
+
                 <h1>Libros Inspiradores </i></h1>
+
                 <p>Sumérgete en la sabiduría de los mejores libros sobre emprendimiento y desarrollo personal. Descubre
                     las
                     claves que han guiado a líderes exitosos hacia el camino del crecimiento y la realización personal.
                 </p>
                 <a class="btnScroll" href="#parte2"><img src="./img/scroll_dark_50px.png" alt="" height="50px"></a>
+
+
             </article>
 
         </section>
@@ -84,6 +117,7 @@
         <section id="parte2" class="width-100 df-column jc-center ai-center ta-center">
 
             <article>
+                <i class="bi bi-bar-chart-line icon"></i>
                 <h1>Consejos de Éxito</h1>
                 <p>Inspiración directa de aquellos que han alcanzado la cima. Explora los valiosos consejos de
                     personajes
@@ -99,6 +133,7 @@
         <section id="parte3" class="width-100 df-column jc-center ai-center ta-center">
 
             <article>
+                <i class="bi bi-camera-reels icon"></i>
                 <h1>Contenido Recomendado</h1>
                 <p>Descubre nuestra selección de contenido público recomendado. Artículos, videos y recursos
                     seleccionados
@@ -115,6 +150,7 @@
 
 
             <article>
+                <i class="bi bi-person-add icon"></i>
                 <h1>Únete Ahora</h1>
                 <p>Haz parte de nuestra comunidad. Inicia sesión para acceder a contenido exclusivo, participar en
                     discusiones

@@ -1,0 +1,17 @@
+#destacados{
+    height: 35vh;
+    background-color: nth($paleta-colores, 3);
+}
+
+#libros{
+    margin-top: 10px;
+    display: grid;
+    align-items: center;
+    grid-template-columns: repeat(auto-fit, minmax(10em, 5fr));
+    grid-gap: 3rem;
+    
+}
+
+#libros img{
+    box-shadow: 4px 5px  10px black;
+}
