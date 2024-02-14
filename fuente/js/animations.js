@@ -3,7 +3,7 @@ let collage = document.getElementById('collage');
 function comprobar() {
     let seccionTop = presentacion.getBoundingClientRect().top;
     let articulo = presentacion.querySelector('article');    
-    //console.log(seccionTop);
+    
 
     if (seccionTop < 310 && seccionTop > -400) {
         
@@ -15,13 +15,9 @@ function comprobar() {
             collage.classList.add('fade-in-5s');
 
 
-        }else{
-            
         }
-        //console.log('esta en la seccion');
     }else{
         articulo.classList.add('ocultar');
-        //console.log(`Esta a ${seccionTop}`);
     }
 
 }

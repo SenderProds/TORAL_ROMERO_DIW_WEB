@@ -8,7 +8,6 @@ window.addEventListener('focus', function() {
 });
 
 
-
 if(typeof nav == 'undefined'){
     let nav = document.querySelector('#nav');
 }
