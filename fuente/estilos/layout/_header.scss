@@ -145,3 +145,30 @@ header img {
   
   
 }
+
+
+@media screen and (max-width: 900px) and (max-height: 290px) and (orientation: landscape) {
+  header {
+    height: 13%;
+    
+  }
+  .menu button{
+    height: 10%;
+  }
+
+  .cerrar-menu{
+    font-size: 25px;
+  }
+
+  .menu ul li {
+    height: 15%;
+    list-style: none;
+    width: 100%;
+    margin-left: 0px;
+
+  }
+
+  .lista button{
+    font-size: clamp(0.313rem, -0.104rem + 6.667vw, 0.938rem);
+  }
+}

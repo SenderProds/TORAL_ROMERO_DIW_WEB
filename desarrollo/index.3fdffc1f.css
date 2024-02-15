@@ -301,11 +301,6 @@ html, body {
   text-shadow: 5px 5px #000;
 }
 
-.bi-arrow-down-circle-fill {
-  font-size: 40px;
-  text-decoration: none;
-}
-
 @media screen and (width <= 800px) {
   article p {
     text-align: center;
@@ -342,6 +337,30 @@ html, body {
   #contenido section:not(presentacion) h1 {
     font-family: Barlow Condensed, sans-serif;
     font-size: 28px;
+  }
+}
+
+@media screen and (width <= 700px) and (height <= 250px) and (orientation: landscape) {
+  #presentacion h3 {
+    font-size: 12px;
+  }
+
+  #contenido section:not(presentacion) h1 {
+    font-family: Barlow Condensed, sans-serif;
+    font-size: 20px;
+  }
+
+  .bi-book, .bi-bar-chart-line, .bi-camera-reels, .bi-person-add {
+    font-size: 40px;
+  }
+
+  .btnScroll {
+    margin-top: 0%;
+    padding: 0;
+  }
+
+  .btnScroll img {
+    height: 25px;
   }
 }
 
@@ -493,6 +512,31 @@ header img {
 @media screen and (width <= 1000px) and (orientation: landscape) {
   header {
     height: 13%;
+  }
+}
+
+@media screen and (width <= 900px) and (height <= 290px) and (orientation: landscape) {
+  header {
+    height: 13%;
+  }
+
+  .menu button {
+    height: 10%;
+  }
+
+  .cerrar-menu {
+    font-size: 25px;
+  }
+
+  .menu ul li {
+    width: 100%;
+    height: 15%;
+    margin-left: 0;
+    list-style: none;
+  }
+
+  .lista button {
+    font-size: clamp(.313rem, 6.667vw - .104rem, .938rem);
   }
 }
 

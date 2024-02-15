@@ -127,7 +127,7 @@ body {
   background: rgb(255, 255, 255);
   background: linear-gradient(0deg, rgb(255, 255, 255) 0%, rgb(255, 255, 255) 48%, rgba(255, 255, 255, 0) 100%);
   z-index: 1;
-  
+
 }
 
 @keyframes fadeIn {
@@ -168,10 +168,6 @@ body {
 }
 
 
-.bi-arrow-down-circle-fill {
-  font-size: 40px;
-  text-decoration: none;
-}
 
 
 
@@ -199,30 +195,61 @@ body {
 
 }
 
-@media screen and (max-width: 1000px) and (orientation: landscape){
-  #presentacion h3{
+@media screen and (max-width: 1000px) and (orientation: landscape) {
+  #presentacion h3 {
     font-size: 14px;
   }
-  
+
 
   #contenido section:not(presentacion) h1 {
     font-family: $fuente-texto-primaria;
     font-size: 28px;
   }
-  
-  
-  
+
+
+
 }
 
 
-@media screen and (max-width: 700px) and (orientation: landscape){
-  #presentacion h3{
+@media screen and (max-width: 700px) and (orientation: landscape) {
+  #presentacion h3 {
     font-size: 14px;
   }
-  
+
 
   #contenido section:not(presentacion) h1 {
     font-family: $fuente-texto-primaria;
     font-size: 28px;
+  }
+}
+
+
+@media screen and (max-width: 700px) and (max-height: 250px) and (orientation: landscape) {
+  #presentacion h3 {
+    font-size: 12px;
+  }
+
+
+  #contenido section:not(presentacion) h1 {
+    font-family: $fuente-texto-primaria;
+    font-size: 20px;
+  }
+
+
+  .bi-book,
+  .bi-bar-chart-line,
+  .bi-camera-reels,
+  .bi-person-add {
+    font-size: 40px;
+
+  }
+
+  .btnScroll {
+    padding: 0px;
+    margin-top: 0%;
+  }
+
+  .btnScroll img {
+    height: 25px;
   }
 }
