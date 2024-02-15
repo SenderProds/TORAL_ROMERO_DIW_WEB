@@ -116,7 +116,7 @@ header img {
 }
 
 
-@media screen and (max-width: 900px) and (orientation: landscape){
+@media screen and (max-width: 900px) and (max-height: 500px)and (orientation: landscape){
   header {
     height: 13%;
     
