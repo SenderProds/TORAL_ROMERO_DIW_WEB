@@ -29,7 +29,7 @@ header img {
 
 
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 850px) {
   header {
     position: fixed;
     justify-content: unset;
@@ -87,4 +87,61 @@ header img {
   .menu ul li div {
     display: none;
   }
+}
+
+
+@media screen and (max-width: 180px) {
+  header img {
+    display: none;
+  }
+  .menu{
+    padding: 0;
+    width: 100%;
+  }
+  
+
+  .menu ul li {
+    height: 80px;
+    list-style: none;
+    width: 100%;
+    margin-left: 0px;
+
+  }
+
+  .menu ul li a button{
+    
+    font-size: 12px;
+  }
+
+}
+
+
+@media screen and (max-width: 900px) and (orientation: landscape){
+  header {
+    height: 13%;
+    
+  }
+  .menu button{
+    height: 50px;
+  }
+
+  .menu ul li {
+    height: 50px;
+    list-style: none;
+    width: 100%;
+    margin-left: 0px;
+
+  }
+  
+}
+
+
+@media screen and (max-width: 1000px) and (orientation: landscape){
+  header {
+    height: 13%;
+    
+  }
+  
+  
+  
 }

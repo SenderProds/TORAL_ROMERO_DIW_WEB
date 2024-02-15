@@ -144,6 +144,16 @@ footer {
   }
 }
 
+@media screen and (width <= 900px) and (orientation: landscape) {
+  footer {
+    height: 90vh;
+  }
+
+  footer h1, footer a {
+    font-size: 13px;
+  }
+}
+
 html, body {
   height: 100vh;
   margin: 0;
@@ -208,6 +218,7 @@ html, body {
   background-color: #10292a;
   border: none;
   border-radius: 10px;
+  margin-top: 10px;
   padding: 10px;
   font-size: 20px;
 }
@@ -283,7 +294,7 @@ html, body {
 }
 
 .bi-book, .bi-bar-chart-line, .bi-camera-reels, .bi-person-add {
-  font-size: 150px;
+  font-size: clamp(2rem, 1.591rem + 6.551vw, 9.37rem);
 }
 
 .icon:hover {
@@ -297,7 +308,7 @@ html, body {
 
 @media screen and (width <= 800px) {
   article p {
-    text-align: justify;
+    text-align: center;
     max-width: 100%;
   }
 
@@ -309,6 +320,28 @@ html, body {
 @media screen and (width <= 280px) {
   .collage {
     display: none;
+  }
+}
+
+@media screen and (width <= 1000px) and (orientation: landscape) {
+  #presentacion h3 {
+    font-size: 14px;
+  }
+
+  #contenido section:not(presentacion) h1 {
+    font-family: Barlow Condensed, sans-serif;
+    font-size: 28px;
+  }
+}
+
+@media screen and (width <= 700px) and (orientation: landscape) {
+  #presentacion h3 {
+    font-size: 14px;
+  }
+
+  #contenido section:not(presentacion) h1 {
+    font-family: Barlow Condensed, sans-serif;
+    font-size: 28px;
   }
 }
 
@@ -359,7 +392,7 @@ header img {
   margin-left: 3px;
 }
 
-@media screen and (width <= 800px) {
+@media screen and (width <= 850px) {
   header {
     justify-content: unset;
     justify-content: space-between;
@@ -415,6 +448,51 @@ header img {
 
   .menu ul li div {
     display: none;
+  }
+}
+
+@media screen and (width <= 180px) {
+  header img {
+    display: none;
+  }
+
+  .menu {
+    width: 100%;
+    padding: 0;
+  }
+
+  .menu ul li {
+    width: 100%;
+    height: 80px;
+    margin-left: 0;
+    list-style: none;
+  }
+
+  .menu ul li a button {
+    font-size: 12px;
+  }
+}
+
+@media screen and (width <= 900px) and (orientation: landscape) {
+  header {
+    height: 13%;
+  }
+
+  .menu button {
+    height: 50px;
+  }
+
+  .menu ul li {
+    width: 100%;
+    height: 50px;
+    margin-left: 0;
+    list-style: none;
+  }
+}
+
+@media screen and (width <= 1000px) and (orientation: landscape) {
+  header {
+    height: 13%;
   }
 }
 
