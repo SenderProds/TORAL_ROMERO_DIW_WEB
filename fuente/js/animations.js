@@ -1,11 +1,12 @@
 let presentacion = document.getElementById('parte1');
 let collage = document.getElementById('collage');
+
 function comprobar() {
-    let seccionTop = presentacion.getBoundingClientRect().top;
+    let seccionRect = presentacion.getBoundingClientRect();
     let articulo = presentacion.querySelector('article');    
     
-
-    if (seccionTop < 310 && seccionTop > -400) {
+    
+    if (seccionRect.top < seccionRect.height && seccionRect.top > -seccionRect.height) {
         
         if(articulo.classList.contains('ocultar')){
             articulo.classList.remove('ocultar');
@@ -18,6 +19,9 @@ function comprobar() {
         }
     }else{
         articulo.classList.add('ocultar');
+        collage.classList.add('ocultar');
+        collage.classList.remove('fade-in-5s');
+        collage.classList.remove('collage');
     }
 
 }
