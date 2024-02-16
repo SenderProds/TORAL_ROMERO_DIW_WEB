@@ -9,10 +9,10 @@ body {
   background-color: nth($paleta-colores, 3);
   color: nth($paleta-colores, 1);
   box-shadow: 0px 1px 10px black;
-}
 
-#presentacion h3 {
-  font-size: $clamp-h3-presentacion;
+  h3 {
+    font-size: $clamp-h3-presentacion;
+  }
 }
 
 .logoPrincipal {
@@ -20,19 +20,25 @@ body {
 }
 
 .btnScroll {
+  position: relative;
   margin-top: 5%;
-  z-index: 1;
+  z-index: 2;
+  height: 50px;
 }
 
 #parte1 {
   background-color: nth($paleta-colores, 4);
   color: nth($paleta-colores, 3);
   z-index: 2;
+
+  article {
+    z-index: 1;
+  }
 }
 
-#parte1,
+#parte1 p,
 #parte2,
-#parte3,
+#parte3 p,
 #parte4 p {
   font-family: $fuente-texto-secundaria;
   font-weight: bold;
@@ -45,6 +51,11 @@ body {
 #parte2 {
   background-color: nth($paleta-colores, 3);
   color: nth($paleta-colores, 4);
+  z-index: 0;
+
+  article{
+    z-index: 1;
+  }
 }
 
 #parte3 {
@@ -55,44 +66,49 @@ body {
 #parte4 {
   background-color: nth($paleta-colores, 4);
   color: nth($paleta-colores, 2);
+
+  h1 {
+    margin: 10px;
+  }
+
+  button {
+    background-color: nth($paleta-colores, 2);
+    color: nth($paleta-colores, 4);
+    font-size: 20px;
+    border-radius: 10px;
+    border: none;
+    padding: 10px;
+    margin-top: 10px;
+  }
 }
 
-#parte4 h1 {
-  margin: 10px;
-}
+#contenido {
+  section {
+    height: 100vh;
+  }
 
-#parte4 button {
-  background-color: nth($paleta-colores, 2);
-  color: nth($paleta-colores, 4);
-  font-size: 20px;
-  border-radius: 10px;
-  border: none;
-  padding: 10px;
-  margin-top: 10px;
-}
+  section:not(presentacion) article {
+    width: 80vw;
+  }
 
-#contenido section {
-  height: 100vh;
-}
-
-#contenido section:not(presentacion) article {
-  width: 80vw;
-}
-
-#contenido section:not(presentacion) h1 {
-  font-family: $fuente-texto-primaria;
-  font-size: $clamp-h1;
+  section:not(presentacion) h1 {
+    font-family: $fuente-texto-primaria;
+    font-size: $clamp-h1;
+  }
 }
 
 #parte1 h1,
 #parte2 h1,
 #parte3 h1 {
+
   text-align: center;
   font-weight: 700;
   margin: 0;
   padding: 0;
-  z-index: 3;
+  
 }
+
+
 
 .collage {
   position: absolute;
@@ -102,16 +118,52 @@ body {
   grid-template-columns: repeat(auto-fit, minmax(6em, 5fr));
   grid-gap: 4rem;
   overflow: hidden;
+
+  img {
+    border-radius: 10px;
+    z-index: 1;
+  }
 }
 
-.collage img {
-  border-radius: 10px;
-  z-index: 1;
+#personajes{
+  position: absolute;
+  width: 90vw;
+  height: 70vh;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(10em, 5fr));
+  grid-gap: 3rem;
+  overflow: hidden;
+  z-index: 0;
 }
 
-#parte1 article {
-  z-index: 1;
+.psj{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 45px;
+  border: solid 1px grey;
+  gap: 1px;
+  padding: 2px;
+  height:55px;
+  margin: 10px;
+  background-color: rgba(255, 255, 255, 0.149);
+  box-shadow: 0px 0px 9px  1px rgba(255, 255, 255, 0.144);
+  width: 190px;
+  
+  img{
+    border-radius: 70px;
+    height: 55px;
+  }
+
+
+  p{
+    font-size: 16px;
+    padding-right: 25px;
+  }
 }
+
+
+
 
 #degradado {
   position: absolute;
@@ -127,12 +179,29 @@ body {
   z-index: 1;
 }
 
+#degradadoPersonajes {
+  position: absolute;
+  width: 90vw;
+  height: 90vh;
+  
+  background: nth($paleta-colores, 3);
+  background: linear-gradient(
+    0deg,
+    #2d4d4d 0%,
+    #2d4d4dfa 50%,
+    #2d4d4d00 100%
+  );
+  z-index: 0;
+}
+
+
+
 @keyframes fadeIn {
-  from {
+  0% {
     opacity: 0;
   }
 
-  to {
+  100% {
     opacity: 1;
   }
 }
@@ -154,6 +223,8 @@ body {
 .bi-camera-reels,
 .bi-person-add {
   font-size: $clamp-icons;
+  z-index: 2;
+  position: relative;
 }
 
 .icon:hover {

@@ -1,18 +1,25 @@
 let parte1 = document.getElementById("parte1");
 let collage = document.getElementById("collage");
 let parte2 = document.getElementById("parte2");
+let personajes = document.getElementById("personajes");
 let parte3 = document.getElementById("parte3");
 let parte4 = document.getElementById("parte4");
 window.addEventListener("scroll", (e)=>{
     comprobar();
 });
-function comprobar() {
+/**
+ * Comprueba si la el scroll esta en alguna de las secciones
+ */ function comprobar() {
     comprobarPosicionPresentacion(parte1, collage);
-    comprobarPosicion(parte2);
+    comprobarPosicionPresentacion(parte2, personajes);
     comprobarPosicion(parte3);
     comprobarPosicion(parte4);
 }
-function comprobarPosicionPresentacion(seccion, imagenes) {
+/**
+ * 
+ * @param {*} seccion Seccion
+ * @param {*} imagenes Imagenes fondo
+ */ function comprobarPosicionPresentacion(seccion, imagenes) {
     let parte1Rect = seccion.getBoundingClientRect();
     let parte1Articulo = seccion.querySelector("article");
     if (parte1Rect.top < parte1Rect.height && parte1Rect.top > -parte1Rect.height) {
@@ -30,7 +37,10 @@ function comprobarPosicionPresentacion(seccion, imagenes) {
         imagenes.classList.remove("collage");
     }
 }
-function comprobarPosicion(seccion) {
+/**
+ * Comprueba si el usuario esta encima de alguna seccion
+ * @param {*} seccion Seccion
+ */ function comprobarPosicion(seccion) {
     let parteRect = seccion.getBoundingClientRect();
     let parteArticulo = seccion.querySelector("article");
     if (parteRect.top < parteRect.height && parteRect.top > -parteRect.height) {

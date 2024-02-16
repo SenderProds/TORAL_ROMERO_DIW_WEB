@@ -84,10 +84,6 @@ header {
   cursor: pointer;
 }
 
-h1 {
-  font-family: Barlow Condensed, sans-serif;
-}
-
 footer {
   background-color: #10292a;
 }
@@ -144,7 +140,7 @@ footer {
   }
 }
 
-@media screen and (width <= 900px) and (orientation: landscape) {
+@media screen and (width <= 800px) and (height <= 450px) and (orientation: landscape) {
   footer {
     height: 90vh;
   }
@@ -175,8 +171,10 @@ html, body {
 }
 
 .btnScroll {
-  z-index: 1;
+  z-index: 2;
+  height: 50px;
   margin-top: 5%;
+  position: relative;
 }
 
 #parte1 {
@@ -185,7 +183,11 @@ html, body {
   background-color: #fff;
 }
 
-#parte1, #parte2, #parte3, #parte4 p {
+#parte1 article {
+  z-index: 1;
+}
+
+#parte1 p, #parte2, #parte3 p, #parte4 p {
   text-align: center;
   margin: 0;
   font-family: Montserrat, sans-serif;
@@ -196,7 +198,12 @@ html, body {
 
 #parte2 {
   color: #fff;
+  z-index: 0;
   background-color: #2d4d4d;
+}
+
+#parte2 article {
+  z-index: 1;
 }
 
 #parte3 {
@@ -233,12 +240,11 @@ html, body {
 
 #contenido section:not(presentacion) h1 {
   font-family: Barlow Condensed, sans-serif;
-  font-size: clamp(1rem, .556rem + 7.111vw, 7rem);
+  font-size: clamp(1rem, .556rem + 7.111vw, 5.4rem);
 }
 
 #parte1 h1, #parte2 h1, #parte3 h1 {
   text-align: center;
-  z-index: 3;
   margin: 0;
   padding: 0;
   font-weight: 700;
@@ -259,8 +265,40 @@ html, body {
   border-radius: 10px;
 }
 
-#parte1 article {
-  z-index: 1;
+#personajes {
+  grid-gap: 3rem;
+  z-index: 0;
+  grid-template-columns: repeat(auto-fit, minmax(10em, 5fr));
+  width: 90vw;
+  height: 70vh;
+  display: grid;
+  position: absolute;
+  overflow: hidden;
+}
+
+.psj {
+  background-color: #ffffff26;
+  border: 1px solid gray;
+  border-radius: 45px;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1px;
+  width: 190px;
+  height: 55px;
+  margin: 10px;
+  padding: 2px;
+  display: flex;
+  box-shadow: 0 0 9px 1px #ffffff25;
+}
+
+.psj img {
+  border-radius: 70px;
+  height: 55px;
+}
+
+.psj p {
+  padding-right: 25px;
+  font-size: 16px;
 }
 
 #degradado {
@@ -271,12 +309,20 @@ html, body {
   position: absolute;
 }
 
+#degradadoPersonajes {
+  z-index: 0;
+  background: linear-gradient(0deg, #2d4d4d 0%, #2d4d4dfa 50%, #2d4d4d00 100%);
+  width: 90vw;
+  height: 90vh;
+  position: absolute;
+}
+
 @keyframes fadeIn {
-  from {
+  0% {
     opacity: 0;
   }
 
-  to {
+  100% {
     opacity: 1;
   }
 }
@@ -294,7 +340,9 @@ html, body {
 }
 
 .bi-book, .bi-bar-chart-line, .bi-camera-reels, .bi-person-add {
+  z-index: 2;
   font-size: clamp(2rem, 1.591rem + 6.551vw, 9.37rem);
+  position: relative;
 }
 
 .icon:hover {
@@ -422,10 +470,6 @@ html, body {
   display: none;
 }
 
-.libro > article > .info {
-  height: 100px;
-}
-
 .libro > article > .btnLibro button {
   color: #fff;
   cursor: pointer;
@@ -441,6 +485,10 @@ html, body {
 
 .libro > article > .btnLibro button:hover {
   color: #ff0;
+}
+
+.libro > article > .info {
+  height: 100px;
 }
 
 .libro > article > .info .precio {
@@ -464,6 +512,12 @@ html, body {
 .libro > article:hover > .btnLibro {
   height: 100px;
   display: block;
+}
+
+@media screen and (width <= 640px) {
+  #libros {
+    width: 45vh;
+  }
 }
 
 header {
@@ -492,6 +546,7 @@ header {
 }
 
 header img {
+  cursor: pointer;
   height: 30%;
   margin-left: 3px;
 }
