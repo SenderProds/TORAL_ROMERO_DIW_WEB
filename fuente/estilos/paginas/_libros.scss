@@ -1,6 +1,5 @@
 #contenido {
   width: 100%;
-  
 }
 
 #destacados {
@@ -26,6 +25,7 @@
   align-items: center;
   border: solid 1px rgb(200, 200, 200);
   border-radius: 5px;
+  
   > img {
     height: 200px;
     width: 150px;
@@ -36,7 +36,6 @@
   > hr {
     width: 80%;
     border: solid 1px rgb(228, 228, 228);
-    
     margin: 0;
   }
 
@@ -50,62 +49,65 @@
       font-size: 16px;
       margin: 0;
     }
-    > .btnLibro{
+    > .btnLibro {
       display: none;
-      
+
+      button {
+        width: 100%;
+        height: 30px;
+        background-color: nth($paleta-colores, 3);
+        padding: 5px;
+        margin: 7px;
+        font-family: $fuente-texto-secundaria;
+        color: nth($paleta-colores, 4);
+        border-radius: 5px;
+        border: none;
+        cursor: pointer;
+      }
+
+      button:hover {
+        color: yellow;
+      }
     }
 
-    > .info{
+    > .info {
       height: 100px;
+
+      .precio {
+        color: rgb(182, 3, 3);
+        font-family: $fuente-texto-secundaria;
+      }
+
+      .star {
+        color: rgb(239, 199, 0);
+      }
+  
+
+      .envio {
+        color: rgb(2, 205, 2);
+        font-size: 14px;
+      }
     }
 
 
-    > .btnLibro button {
-      width: 100%;
-      height: 30px;
-      background-color: nth($paleta-colores, 3);
-      padding: 5px;
-      margin: 7px;
-      font-family: $fuente-texto-secundaria;
-      color: white;
-      border-radius: 5px;
-      border: none;
-      cursor: pointer;
-    }
-
-
-    > .btnLibro button:hover{
-      color: yellow;
-    }
-
-
-    > .info .precio{
-       color: rgb(182, 3, 3);
-      font-family: $fuente-texto-secundaria;
-    
-    }
-
-    > .info .star{
-      color: rgb(239, 199, 0);
-    }
-
-    > .info .envio{
-      color: rgb(2, 205, 2);
-      font-size: 14px;
-    }
   }
 
-
-  > article:hover{
-    > .info{
+  > article:hover {
+    > .info {
       display: none;
     }
 
-
-    > .btnLibro{
+    > .btnLibro {
       display: block;
       height: 100px;
     }
+  }
+}
 
+
+
+@media screen and (max-width: 640){
+  #libros{
+    width: 45vh;
   }
 }
