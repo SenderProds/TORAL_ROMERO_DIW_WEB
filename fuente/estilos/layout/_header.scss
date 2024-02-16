@@ -27,6 +27,10 @@ header img {
   height: 30%;
 }
 
+.logoPagina{
+  cursor: pointer;
+}
+
 
 
 @media screen and (max-width: 850px) {
@@ -61,6 +65,7 @@ header img {
     bottom: 0;
     background-color: nth($paleta-colores, 2);
     z-index: 4;
+    box-shadow: 40px 0px 50px white;
   }
 
   .menu.visible {

@@ -36,3 +36,12 @@ window.addEventListener('scroll', (e) => {
         nav.classList.remove('visible');
     }
 });
+
+
+
+let logo = document.getElementById('logoPagina');
+
+logo.addEventListener('click', (e) => {
+    console.log('click');
+    location.href ='../index.html' ;
+});
