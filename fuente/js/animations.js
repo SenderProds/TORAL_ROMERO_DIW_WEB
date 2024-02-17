@@ -7,6 +7,8 @@ let personajes = document.getElementById("personajes");
 
 
 let parte3 = document.getElementById("parte3");
+let contenido = document.getElementById("contenidoRecomendado");
+
 let parte4 = document.getElementById("parte4");
 
 
@@ -24,7 +26,7 @@ window.addEventListener("scroll", (e) => {
 function comprobar() {
   comprobarPosicionPresentacion(parte1, collage);
   comprobarPosicionPresentacion(parte2, personajes);
-  comprobarPosicion(parte3);
+  comprobarPosicionPresentacion(parte3, contenido);
   comprobarPosicion(parte4);
 }
 
