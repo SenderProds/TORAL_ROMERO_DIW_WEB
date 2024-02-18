@@ -1,6 +1,40 @@
 #contenido {
   width: 100%;
+
+
+
 }
+
+
+.mostrarCarrito{
+
+  position: fixed;
+  width: 70px;
+  height: 70px;
+  background-color: nth($paleta-colores, 3);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 40px;
+  right: 10;
+  top: 50%;
+  color: nth($paleta-colores, 1);
+
+  #productos{
+    text-align: center;
+    position: fixed;
+    height: 20px;
+    width: 20px;
+    background-color: red;
+    border-radius: 10px;
+    color: black;
+    right: 60px;
+    margin-top: 50px;
+    font-size: 16px;
+  }
+}
+
 
 #destacados {
   width: 100%;
@@ -11,28 +45,60 @@
     margin-bottom: 3%;
     height: 150px;
     width: 150px;
-    background-color: white;
+    background-color: nth($paleta-colores, 3);
+    box-shadow: 0px 0px 10px 2px white;
     border-radius: 50%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-weight: 800;
+    color: white;
+    
+
+
   }
+
 }
 
 #libros {
   width: 90vw;
   margin-top: 10px;
-  display: grid;
-  align-items: center;
   grid-template-columns: repeat(auto-fit, minmax(17em, 5fr));
   grid-gap: 2rem;
   justify-items: center;
+  margin-bottom: 10px;
   
 }
 
 #filtros{
   width: 90vw;
   height: 50px;
-  background-color: nth($paleta-colores, 1);
+  background-color: nth($paleta-colores, 3);
   border-radius: 20px;
   margin-top: 10px;
+  color:  nth($paleta-colores, 4);
+
+  select{
+    border: none;
+    padding: 5px;
+    background-color: nth($paleta-colores, 1);
+    color:  nth($paleta-colores, 2);
+    border-radius: 10px;
+    outline: none;
+    font-family: $fuente-texto-secundaria;
+
+    
+  }
+
+  option{
+    color: rgb(0, 0, 0);
+    border-radius: 10px;
+    font-family: $fuente-texto-secundaria;
+  }
+
+  
 }
 
 .libro {
@@ -43,7 +109,7 @@
   align-items: center;
   border: solid 1px rgb(200, 200, 200);
   border-radius: 5px;
-  box-shadow: 0px 0px 10px 3px rgba(0, 0, 0, 0.096);
+  box-shadow: 0px 0px 10px 4px rgba(0, 0, 0, 0.171);
   
   > img {
     height: 200px;
@@ -117,6 +183,8 @@
   }
 
   > article:hover {
+
+    
     .info {
       display: none;
     }
@@ -129,13 +197,65 @@
 }
 
 
+
 .libro:hover{
+  transition: ease-in-out .2s;
+box-shadow: 10px  10px 2px 0px nth($paleta-colores, 1);
   
 }
+
+
+@media screen and (max-width: 900){
+  #destacados{
+    display: none;
+  }
+
+  #filtros{
+    margin-top: 15%;
+  }
+}
+
+
+@media screen and (max-width: 720){
+  #contenedorValoracion{
+    display: none;
+  }
+
+  #contenedorPrecio{
+    display: none;
+  }
+
+  #filtros{
+    width: 50%;
+    cursor: pointer;
+  }
+}
+
 
 
 @media screen and (max-width: 640){
   #libros{
     width: 45vh;
+  }
+
+  #filtros{
+    margin-top: 18%;
+  }
+}
+
+
+
+@media screen and (max-width: 640){
+
+  #filtros{
+    margin-top: 20%;
+  }
+}
+
+
+@media screen and (max-width: 430){
+
+  #filtros{
+    margin-top: 30%;
   }
 }

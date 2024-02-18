@@ -13,6 +13,9 @@
     <link rel="shortcut icon" href="../img/logoIcon.ico" type="image/x-icon">
 
     <script src="../js/script.js" defer></script>
+    <script src="../js/sesion.js" defer></script>
+    <script src="../js/libros.js" defer></script>
+
 </head>
 
 <body>
@@ -39,8 +42,8 @@
                         <div></div><button>RECOMENDADO</button>
                     </a></li>
 
-                <li><a href="../html/iniciarSesion.html">
-                        <div></div><button>INICIAR SESIÓN</button>
+                    <li><a href="../html/iniciarSesion.html">
+                        <div></div><button id="btnSesion">INICIAR SESIÓN</button>
                     </a></li>
             </ul>
 
@@ -50,8 +53,8 @@
 
 
     <section id="contenido" class="df-column ai-center">
-        <article id="destacados" class="display-flex jc-space-around ai-center">
-            <div></div>
+        <article id="destacados" class="display-flex jc-space-around ai-end">
+            <div>LIBRO DE LA SEMANA</div>
             <div></div>
             <div></div>
             <div></div>
@@ -62,26 +65,48 @@
 
 
         <article id="filtros" class="display-flex ai-center jc-space-around">
-            <i class="bi bi-funnel"></i>
-            <label for="valoracion">Valoracion <i class="bi bi-star-fill"></i></label>
-            <select name="valoracion" id="valoracion">
-                <option value="">5 estrellas</option>
-                <option value="">4 estrellas</option>
-                <option value="">3 estrellas</option>
-                <option value="">2 estrellas</option>
-                <option value="">1 estrellas</option>
+            <i class="bi bi-funnel">Filtro</i>
+            
+            <div id="contenedorValoracion">
+                <label for="valoracion">Valoracion <i class="bi bi-star-fill"></i></label>
+                <select name="valoracion" id="valoracion">
+                    <option value="">5 estrellas</option>
+                    <option value="">4 estrellas</option>
+                    <option value="">3 estrellas</option>
+                    <option value="">2 estrellas</option>
+                    <option value="">1 estrellas</option>
+    
+    
+    
+                </select>
+            </div>
+
+            <div id="contenedorPrecio">
+                
+                <label for="precioMin">Precio Minimo: </label>
+                <select name="precioMin" id="precioMin">
+                    <option value="0">0€</option>
+                    <option value="10">10€</option>
+                    <option value="20">20€</option>
 
 
+                </select>
 
-            </select>
+                |<label for="precioMax">Precio Maximo: </label>
+                <select name="precioMax" id="precioMin">
+                    <option value="10">10€</option>
+                    <option value="20">20€</option>
+                    <option value="30">30€</option>
 
 
-            <label for="precio">Precio:</label>
-            <input type="range" name="precio" id="precio">
+                </select>
+
+            </div>
+            
         </article>
 
 
-        <article id="libros">
+        <article id="libros" class="display-grid ai-center ji-center">
 
             <article class="libro">
 
@@ -107,7 +132,7 @@
 
                     <article class="btnLibro ">
                         <button>VER</button>
-                        <button>AÑADIR</button>
+                        <button id="btnAdd">AÑADIR</button>
                     </article>
 
                 </article>
@@ -116,11 +141,13 @@
 
 
             <article class="libro">
+
+
                 <img src="https://th.bing.com/th/id/R.e0f76658273f10ffc84f1a800472c1d9?rik=FLFB33BmjAAqUg&riu=http%3a%2f%2fwww.granvalparaiso.cl%2fwp-content%2fuploads%2f2014%2f09%2flos-7-habitos-de-la-gente-altamente-efectiva_9788449324949.jpg&ehk=4PwHFKb2fTrsNqnFb5Q5THagRJgVtWmH%2bT4AdIddAw8%3d&risl=&pid=ImgRaw&r=0"
                     alt="">
                 <hr>
                 <article>
-                    <h1>Titulo del libro</h1>
+                    <h1>Los 7 habitos de la gente ...</h1>
                     <article class="info ">
 
                         <div class="precio">19.90€</div>
@@ -137,7 +164,7 @@
 
                     <article class="btnLibro ">
                         <button>VER</button>
-                        <button>AÑADIR</button>
+                        <button id="btnAdd">AÑADIR</button>
                     </article>
 
                 </article>
@@ -146,11 +173,13 @@
 
 
             <article class="libro">
+
+
                 <img src="https://th.bing.com/th/id/R.e0f76658273f10ffc84f1a800472c1d9?rik=FLFB33BmjAAqUg&riu=http%3a%2f%2fwww.granvalparaiso.cl%2fwp-content%2fuploads%2f2014%2f09%2flos-7-habitos-de-la-gente-altamente-efectiva_9788449324949.jpg&ehk=4PwHFKb2fTrsNqnFb5Q5THagRJgVtWmH%2bT4AdIddAw8%3d&risl=&pid=ImgRaw&r=0"
                     alt="">
                 <hr>
                 <article>
-                    <h1>Titulo del libro</h1>
+                    <h1>Los 7 habitos de la gente ...</h1>
                     <article class="info ">
 
                         <div class="precio">19.90€</div>
@@ -167,7 +196,7 @@
 
                     <article class="btnLibro ">
                         <button>VER</button>
-                        <button>AÑADIR</button>
+                        <button id="btnAdd">AÑADIR</button>
                     </article>
 
                 </article>
@@ -176,11 +205,13 @@
 
 
             <article class="libro">
+
+
                 <img src="https://th.bing.com/th/id/R.e0f76658273f10ffc84f1a800472c1d9?rik=FLFB33BmjAAqUg&riu=http%3a%2f%2fwww.granvalparaiso.cl%2fwp-content%2fuploads%2f2014%2f09%2flos-7-habitos-de-la-gente-altamente-efectiva_9788449324949.jpg&ehk=4PwHFKb2fTrsNqnFb5Q5THagRJgVtWmH%2bT4AdIddAw8%3d&risl=&pid=ImgRaw&r=0"
                     alt="">
                 <hr>
                 <article>
-                    <h1>Titulo del libro</h1>
+                    <h1>Los 7 habitos de la gente ...</h1>
                     <article class="info ">
 
                         <div class="precio">19.90€</div>
@@ -197,7 +228,7 @@
 
                     <article class="btnLibro ">
                         <button>VER</button>
-                        <button>AÑADIR</button>
+                        <button id="btnAdd">AÑADIR</button>
                     </article>
 
                 </article>
@@ -206,11 +237,13 @@
 
 
             <article class="libro">
+
+
                 <img src="https://th.bing.com/th/id/R.e0f76658273f10ffc84f1a800472c1d9?rik=FLFB33BmjAAqUg&riu=http%3a%2f%2fwww.granvalparaiso.cl%2fwp-content%2fuploads%2f2014%2f09%2flos-7-habitos-de-la-gente-altamente-efectiva_9788449324949.jpg&ehk=4PwHFKb2fTrsNqnFb5Q5THagRJgVtWmH%2bT4AdIddAw8%3d&risl=&pid=ImgRaw&r=0"
                     alt="">
                 <hr>
                 <article>
-                    <h1>Titulo del libro</h1>
+                    <h1>Los 7 habitos de la gente ...</h1>
                     <article class="info ">
 
                         <div class="precio">19.90€</div>
@@ -227,7 +260,7 @@
 
                     <article class="btnLibro ">
                         <button>VER</button>
-                        <button>AÑADIR</button>
+                        <button id="btnAdd">AÑADIR</button>
                     </article>
 
                 </article>
@@ -236,11 +269,13 @@
 
 
             <article class="libro">
+
+
                 <img src="https://th.bing.com/th/id/R.e0f76658273f10ffc84f1a800472c1d9?rik=FLFB33BmjAAqUg&riu=http%3a%2f%2fwww.granvalparaiso.cl%2fwp-content%2fuploads%2f2014%2f09%2flos-7-habitos-de-la-gente-altamente-efectiva_9788449324949.jpg&ehk=4PwHFKb2fTrsNqnFb5Q5THagRJgVtWmH%2bT4AdIddAw8%3d&risl=&pid=ImgRaw&r=0"
                     alt="">
                 <hr>
                 <article>
-                    <h1>Titulo del libro</h1>
+                    <h1>Los 7 habitos de la gente ...</h1>
                     <article class="info ">
 
                         <div class="precio">19.90€</div>
@@ -257,7 +292,7 @@
 
                     <article class="btnLibro ">
                         <button>VER</button>
-                        <button>AÑADIR</button>
+                        <button id="btnAdd">AÑADIR</button>
                     </article>
 
                 </article>
@@ -266,11 +301,13 @@
 
 
             <article class="libro">
+
+
                 <img src="https://th.bing.com/th/id/R.e0f76658273f10ffc84f1a800472c1d9?rik=FLFB33BmjAAqUg&riu=http%3a%2f%2fwww.granvalparaiso.cl%2fwp-content%2fuploads%2f2014%2f09%2flos-7-habitos-de-la-gente-altamente-efectiva_9788449324949.jpg&ehk=4PwHFKb2fTrsNqnFb5Q5THagRJgVtWmH%2bT4AdIddAw8%3d&risl=&pid=ImgRaw&r=0"
                     alt="">
                 <hr>
                 <article>
-                    <h1>Titulo del libro</h1>
+                    <h1>Los 7 habitos de la gente ...</h1>
                     <article class="info ">
 
                         <div class="precio">19.90€</div>
@@ -287,7 +324,7 @@
 
                     <article class="btnLibro ">
                         <button>VER</button>
-                        <button>AÑADIR</button>
+                        <button id="btnAdd">AÑADIR</button>
                     </article>
 
                 </article>
@@ -296,11 +333,13 @@
 
 
             <article class="libro">
+
+
                 <img src="https://th.bing.com/th/id/R.e0f76658273f10ffc84f1a800472c1d9?rik=FLFB33BmjAAqUg&riu=http%3a%2f%2fwww.granvalparaiso.cl%2fwp-content%2fuploads%2f2014%2f09%2flos-7-habitos-de-la-gente-altamente-efectiva_9788449324949.jpg&ehk=4PwHFKb2fTrsNqnFb5Q5THagRJgVtWmH%2bT4AdIddAw8%3d&risl=&pid=ImgRaw&r=0"
                     alt="">
                 <hr>
                 <article>
-                    <h1>Titulo del libro</h1>
+                    <h1>Los 7 habitos de la gente ...</h1>
                     <article class="info ">
 
                         <div class="precio">19.90€</div>
@@ -317,7 +356,7 @@
 
                     <article class="btnLibro ">
                         <button>VER</button>
-                        <button>AÑADIR</button>
+                        <button id="btnAdd">AÑADIR</button>
                     </article>
 
                 </article>
@@ -326,11 +365,13 @@
 
 
             <article class="libro">
+
+
                 <img src="https://th.bing.com/th/id/R.e0f76658273f10ffc84f1a800472c1d9?rik=FLFB33BmjAAqUg&riu=http%3a%2f%2fwww.granvalparaiso.cl%2fwp-content%2fuploads%2f2014%2f09%2flos-7-habitos-de-la-gente-altamente-efectiva_9788449324949.jpg&ehk=4PwHFKb2fTrsNqnFb5Q5THagRJgVtWmH%2bT4AdIddAw8%3d&risl=&pid=ImgRaw&r=0"
                     alt="">
                 <hr>
                 <article>
-                    <h1>Titulo del libro</h1>
+                    <h1>Los 7 habitos de la gente ...</h1>
                     <article class="info ">
 
                         <div class="precio">19.90€</div>
@@ -347,7 +388,7 @@
 
                     <article class="btnLibro ">
                         <button>VER</button>
-                        <button>AÑADIR</button>
+                        <button id="btnAdd">AÑADIR</button>
                     </article>
 
                 </article>
@@ -356,11 +397,13 @@
 
 
             <article class="libro">
+
+
                 <img src="https://th.bing.com/th/id/R.e0f76658273f10ffc84f1a800472c1d9?rik=FLFB33BmjAAqUg&riu=http%3a%2f%2fwww.granvalparaiso.cl%2fwp-content%2fuploads%2f2014%2f09%2flos-7-habitos-de-la-gente-altamente-efectiva_9788449324949.jpg&ehk=4PwHFKb2fTrsNqnFb5Q5THagRJgVtWmH%2bT4AdIddAw8%3d&risl=&pid=ImgRaw&r=0"
                     alt="">
                 <hr>
                 <article>
-                    <h1>Titulo del libro</h1>
+                    <h1>Los 7 habitos de la gente ...</h1>
                     <article class="info ">
 
                         <div class="precio">19.90€</div>
@@ -377,7 +420,7 @@
 
                     <article class="btnLibro ">
                         <button>VER</button>
-                        <button>AÑADIR</button>
+                        <button id="btnAdd">AÑADIR</button>
                     </article>
 
                 </article>
@@ -385,12 +428,43 @@
             </article>
 
 
+            <article class="libro">
 
 
+                <img src="https://th.bing.com/th/id/R.e0f76658273f10ffc84f1a800472c1d9?rik=FLFB33BmjAAqUg&riu=http%3a%2f%2fwww.granvalparaiso.cl%2fwp-content%2fuploads%2f2014%2f09%2flos-7-habitos-de-la-gente-altamente-efectiva_9788449324949.jpg&ehk=4PwHFKb2fTrsNqnFb5Q5THagRJgVtWmH%2bT4AdIddAw8%3d&risl=&pid=ImgRaw&r=0"
+                    alt="">
+                <hr>
+                <article>
+                    <h1>Los 7 habitos de la gente ...</h1>
+                    <article class="info ">
 
+                        <div class="precio">19.90€</div>
+                        <div class="star">
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star"></i>(5)
+                        </div>
+                        <div class="envio">¡ENVÍO GRATIS!<i class="bi bi-truck"></i></div>
+
+                    </article>
+
+                    <article class="btnLibro ">
+                        <button>VER</button>
+                        <button id="btnAdd">AÑADIR</button>
+                    </article>
+
+                </article>
+
+            </article>
 
 
         </article>
+
+        <div id="carrito" class="ocultar"><i class="bi bi-bag"></i>
+        <div id="productos"></div>
+        </div>
     </section>
 
 
