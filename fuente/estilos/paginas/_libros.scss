@@ -1,13 +1,8 @@
 #contenido {
   width: 100%;
-
-
-
 }
 
-
-.mostrarCarrito{
-
+.mostrarCarrito {
   position: fixed;
   width: 70px;
   height: 70px;
@@ -20,28 +15,28 @@
   right: 10;
   top: 50%;
   color: nth($paleta-colores, 1);
+  box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.442);
 
-  #productos{
+  #productos {
     text-align: center;
     position: fixed;
-    height: 20px;
     width: 20px;
-    background-color: red;
+    background-color: rgb(255, 30, 0);
     border-radius: 10px;
     color: black;
     right: 60px;
     margin-top: 50px;
     font-size: 16px;
+    box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.442);
   }
 }
-
 
 #destacados {
   width: 100%;
   height: 35vh;
   background-color: nth($paleta-colores, 3);
 
-  > div{
+  > div {
     margin-bottom: 3%;
     height: 150px;
     width: 150px;
@@ -55,11 +50,7 @@
     justify-content: center;
     font-weight: 800;
     color: white;
-    
-
-
   }
-
 }
 
 #libros {
@@ -69,36 +60,31 @@
   grid-gap: 2rem;
   justify-items: center;
   margin-bottom: 10px;
-  
 }
 
-#filtros{
+#filtros {
   width: 90vw;
   height: 50px;
   background-color: nth($paleta-colores, 3);
   border-radius: 20px;
   margin-top: 10px;
-  color:  nth($paleta-colores, 4);
+  color: nth($paleta-colores, 4);
 
-  select{
+  select {
     border: none;
     padding: 5px;
     background-color: nth($paleta-colores, 1);
-    color:  nth($paleta-colores, 2);
+    color: nth($paleta-colores, 2);
     border-radius: 10px;
     outline: none;
     font-family: $fuente-texto-secundaria;
-
-    
   }
 
-  option{
+  option {
     color: rgb(0, 0, 0);
     border-radius: 10px;
     font-family: $fuente-texto-secundaria;
   }
-
-  
 }
 
 .libro {
@@ -110,14 +96,13 @@
   border: solid 1px rgb(200, 200, 200);
   border-radius: 5px;
   box-shadow: 0px 0px 10px 4px rgba(0, 0, 0, 0.171);
-  
+
   > img {
     height: 200px;
     width: 150px;
     margin: 10px;
     box-shadow: 0px 0px 5px 2px rgba(0, 0, 0, 0.253);
   }
-  
 
   > hr {
     width: 80%;
@@ -143,7 +128,7 @@
         width: 100%;
         height: 30px;
         background-color: nth($paleta-colores, 3);
-        
+
         margin-top: 7px;
         font-family: $fuente-texto-secundaria;
         color: nth($paleta-colores, 4);
@@ -171,20 +156,15 @@
       .star {
         color: rgb(239, 199, 0);
       }
-  
 
       .envio {
         color: rgb(2, 205, 2);
         font-size: 14px;
       }
     }
-
-
   }
 
   > article:hover {
-
-    
     .info {
       display: none;
     }
@@ -196,66 +176,77 @@
   }
 }
 
-
-
-.libro:hover{
-  transition: ease-in-out .2s;
-box-shadow: 10px  10px 2px 0px nth($paleta-colores, 1);
-  
+.libro:hover {
+  transition: ease-in-out 0.2s;
+  box-shadow: 10px 10px 2px 0px nth($paleta-colores, 1);
 }
 
-
-@media screen and (max-width: 900){
-  #destacados{
+@media screen and (max-width: 900) {
+  #destacados {
     display: none;
   }
 
-  #filtros{
+  #filtros {
     margin-top: 15%;
   }
 }
 
-
-@media screen and (max-width: 720){
-  #contenedorValoracion{
+@media screen and (max-width: 720) {
+  #contenedorValoracion {
     display: none;
   }
 
-  #contenedorPrecio{
+  #contenedorPrecio {
     display: none;
   }
 
-  #filtros{
+  #filtros {
     width: 50%;
     cursor: pointer;
+    box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.293);
   }
 }
 
-
-
-@media screen and (max-width: 640){
-  #libros{
+@media screen and (max-width: 640) {
+  #libros {
     width: 45vh;
   }
 
-  #filtros{
+  #filtros {
     margin-top: 18%;
   }
 }
 
+@media screen and (max-width: 640) {
+  #filtros {
+    position: fixed;
+    margin-top: 21%;
+  }
 
-
-@media screen and (max-width: 640){
-
-  #filtros{
-    margin-top: 20%;
+  #libros {
+    margin-top: 35%;
   }
 }
 
+@media screen and (max-width: 500) {
+  .mostrarCarrito {
+    position: fixed;
+    width: 70px;
+    height: 70px;
+    background-color: nth($paleta-colores, 3);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 40px;
+    right: 10;
+    top: 80%;
+    color: nth($paleta-colores, 1);
+  }
+}
 
-@media screen and (max-width: 430){
-
-  #filtros{
-    margin-top: 30%;
+@media screen and (max-width: 400) {
+  #filtros {
+    margin-top: 20%;
   }
 }

@@ -45,3 +45,5 @@ logo.addEventListener('click', (e) => {
     console.log('click');
     location.href ='../index.html' ;
 });
+
+
