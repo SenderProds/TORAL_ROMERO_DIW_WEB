@@ -38,7 +38,7 @@ function comprobar() {
  */
 function comprobarPosicionPresentacion(seccion, imagenes){
     let parte1Rect = seccion.getBoundingClientRect();
-    let parte1Articulo = seccion.querySelector("article");
+    let parte1Articulo = seccion.querySelector(".textoInformacion");
   
     if (
       parte1Rect.top < parte1Rect.height &&

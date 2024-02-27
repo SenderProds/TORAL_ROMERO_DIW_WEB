@@ -26,12 +26,12 @@ body {
   height: 50px;
 }
 
-#parte1 {
+#parte1{
   background-color: nth($paleta-colores, 4);
   color: nth($paleta-colores, 3);
   z-index: 2;
 
-  article {
+  article:not(#collage){
     z-index: 1;
   }
 }
@@ -53,7 +53,7 @@ body {
   color: nth($paleta-colores, 4);
   z-index: 0;
 
-  article{
+  article:not(#personajes){
     z-index: 1;
   }
 }
@@ -62,7 +62,7 @@ body {
   background-color: nth($paleta-colores, 1);
   color: nth($paleta-colores, 2);
 
-  article{
+  article:not(#contenidoRecomendado){
     z-index: 2;
   }
 }
@@ -178,10 +178,12 @@ body {
   background-color: rgba(255, 255, 255, 0.149);
   box-shadow: 0px 0px 9px  1px rgba(255, 255, 255, 0.144);
   width: 190px;
+  z-index: 1;
   
   img{
     border-radius: 70px;
     height: 55px;
+    
   }
 
 
@@ -220,7 +222,7 @@ body {
     #2d4d4dfd 50%,
     #2d4d4d00 100%
   );
-  z-index: 0;
+  z-index: 2;
 }
 
 
@@ -233,7 +235,7 @@ body {
   background: linear-gradient(
     0deg,
     #bcebbe 0%,
-    #bcebbefb 50%,
+    #bcebbefd 60%,
     #bcebbe00 100%
   );
   z-index: 1;
