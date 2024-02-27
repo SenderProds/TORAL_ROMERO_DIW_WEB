@@ -7,7 +7,8 @@
     <title>Libros</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@0,100..900&display=swap" rel="stylesheet">
+ 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="../estilos/principal.scss">
     <link rel="shortcut icon" href="../img/logoIcon.ico" type="image/x-icon">
@@ -53,18 +54,21 @@
 
 
     <section id="contenido" class="df-column ai-center">
+
+        <!--Destacados-->
         <article id="destacados" class="display-flex jc-space-around ai-end">
-            <div>LIBRO DE LA SEMANA</div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
+            <div id="destSemana">LIBRO DE LA SEMANA</div>
+            <div>LIBRO DE EL MES</div>
+            <div>LIBRO MAS VENDIDO</div>
+            <div>AUTOR DESTACADO</div>
+            <div>PROMOCIONES</div>
+           
            
         </article>
 
         
 
-
+        <!--Filtros-->
         <article id="filtros" class="display-flex ai-center jc-space-around">
             <i class="bi bi-funnel">Filtro</i>
             
@@ -107,11 +111,14 @@
         </article>
 
 
+
+
+        <!--Libros-->
         <article id="libros" class="display-grid ai-center ji-center">
 
             <article class="libro">
 
-
+                <a href="libros/libro1.html" class="enlaceLibro"><button></button></a>
                 <img src="https://th.bing.com/th/id/R.e0f76658273f10ffc84f1a800472c1d9?rik=FLFB33BmjAAqUg&riu=http%3a%2f%2fwww.granvalparaiso.cl%2fwp-content%2fuploads%2f2014%2f09%2flos-7-habitos-de-la-gente-altamente-efectiva_9788449324949.jpg&ehk=4PwHFKb2fTrsNqnFb5Q5THagRJgVtWmH%2bT4AdIddAw8%3d&risl=&pid=ImgRaw&r=0"
                     alt="">
                 <hr>
@@ -132,7 +139,7 @@
                     </article>
 
                     <article class="btnLibro ">
-                        <button>VER</button>
+                        <a href="libros/libro1.html"><button>VER</button></a>
                         <button id="btnAdd">AÑADIR</button>
                     </article>
 
@@ -463,7 +470,7 @@
 
         </article>
 
-        <div id="carrito" class="ocultar"><i class="bi bi-bag"></i>
+        <div id="carrito" class="ocultar"><i class="bi bi-bag"><a href="carrito.html"></a></i>
         <div id="productos"></div>
         </div>
     </section>

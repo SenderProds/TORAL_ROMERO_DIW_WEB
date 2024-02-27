@@ -1,13 +1,21 @@
 body {
   font-family: $fuente-texto-secundaria;
+  margin: 0;
 }
 
+//Header
 header {
   background-color: nth($paleta-colores, 2);
+  margin: 0;
+
+  img {
+    cursor: pointer;
+    margin-left: 3px;
+  }
 }
 
 .menu {
-  button{
+  button {
     width: 100%;
     height: 90%;
     background-color: nth($paleta-colores, 2);
@@ -17,18 +25,29 @@ header {
     box-shadow: none;
   }
 
-  button:hover{
+  button:hover {
     background: linear-gradient(#bcebbea2, #10292a);
   }
 
-  div{
+  div {
     width: 100%;
     height: 3px;
     background-color: nth($paleta-colores, 1);
   }
+
+  ul {
+    margin: 0;
+
+    li {
+      list-style: none;
+      margin-left: 5px;
+    }
+  }
 }
 
-
+.logoPagina {
+  cursor: pointer;
+}
 
 .abrir-menu,
 .cerrar-menu {
@@ -36,24 +55,121 @@ header {
   display: none;
 }
 
-.lista button{
+.lista button {
   cursor: pointer;
+}
+
+@media screen and (max-width: 850px) {
+  .abrir-menu,
+  .cerrar-menu {
+    border: 0;
+    background-color: transparent;
+    cursor: pointer;
+    color: nth($paleta-colores, 1);
+  }
+
+  .menu {
+    opacity: 0;
+    visibility: hidden;
+    padding: 2rem;
+    background-color: nth($paleta-colores, 2);
+    box-shadow: 40px 0px 50px white;
+  }
+
+  .visible {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .lista{
+    padding-left: 0;
+  }
+
+  .menu ul li {
+    list-style: none;
+    
+  }
+}
+
+@media screen and (max-width: 180px) {
+
+  .menu{
+    padding: 0;
+  }
+  
+
+  .menu ul li {
+    list-style: none;
+    margin-left: 0px;
+
+  }
+
+  .menu ul li a button{
+    font-size: 12px;
+  }
+
+}
+
+@media screen and (max-width: 1900px) and (max-height: 500px)and (orientation: landscape){
+
+
+  .menu ul li {
+    list-style: none;
+    margin-left: 0px;
+  }
+  
 }
 
 
 
+@media screen and (max-width: 900px) and (max-height: 290px) and (orientation: landscape) {
+  .cerrar-menu{
+    font-size: 25px;
+  }
+
+  .menu ul li {
+    list-style: none;
+    margin-left: 0px;
+  }
+
+  .lista button{
+    font-size: clamp(0.313rem, -0.104rem + 6.667vw, 0.938rem);
+  }
+}
+
+
+//Footer
+
 footer {
   background-color: nth($paleta-colores, 2);
 
-  h1{
+  h1 {
     font-family: $fuente-texto-secundaria;
     font-size: 18px;
     color: nth($paleta-colores, 1);
   }
 
-  a{
+  a {
     text-decoration: none;
     color: nth($paleta-colores, 4);
   }
 }
 
+@media screen and (max-width: 800px) {
+  footer article {
+    margin-top: 0%;
+  }
+
+  footer h1 {
+    font-size: 15px;
+  }
+}
+
+@media screen and (max-width: 800px) and (max-height: 450px) and (orientation: landscape) {
+  footer h1 {
+    font-size: 13px;
+  }
+  footer a {
+    font-size: 13px;
+  }
+}
