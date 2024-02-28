@@ -26,12 +26,12 @@ body {
   height: 50px;
 }
 
-#parte1{
+#parte1 {
   background-color: nth($paleta-colores, 4);
   color: nth($paleta-colores, 3);
   z-index: 2;
 
-  article:not(#collage){
+  article:not(#collage) {
     z-index: 1;
   }
 }
@@ -53,7 +53,7 @@ body {
   color: nth($paleta-colores, 4);
   z-index: 0;
 
-  article:not(#personajes){
+  article:not(#personajes) {
     z-index: 1;
   }
 }
@@ -62,7 +62,7 @@ body {
   background-color: nth($paleta-colores, 1);
   color: nth($paleta-colores, 2);
 
-  article:not(#contenidoRecomendado){
+  article:not(#contenidoRecomendado) {
     z-index: 2;
   }
 }
@@ -109,7 +109,7 @@ body {
   font-weight: 700;
   margin: 0;
   padding: 0;
-  
+
 }
 
 
@@ -140,16 +140,16 @@ body {
   grid-gap: 5rem;
   overflow: hidden;
 
-  img{
+  img {
     border-radius: 10px;
     z-index: 1;
     height: 120px;
-    box-shadow: 0px 0px 8px  2px rgba(0, 0, 0, 0.274);
+    box-shadow: 0px 0px 8px 2px rgba(0, 0, 0, 0.274);
     margin: 10px;
   }
 }
 
-#personajes{
+#personajes {
   position: absolute;
   box-sizing: border-box;
   align-items: center;
@@ -165,7 +165,7 @@ body {
   z-index: 0;
 }
 
-.psj{
+.psj {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -173,21 +173,21 @@ body {
   border: solid 1px grey;
   gap: 1px;
   padding: 2px;
-  height:55px;
+  height: 55px;
   margin: 10px;
   background-color: rgba(255, 255, 255, 0.149);
-  box-shadow: 0px 0px 9px  1px rgba(255, 255, 255, 0.144);
+  box-shadow: 0px 0px 9px 1px rgba(255, 255, 255, 0.144);
   width: 190px;
   z-index: 1;
-  
-  img{
+
+  img {
     border-radius: 70px;
     height: 55px;
-    
+
   }
 
 
-  p{
+  p {
     font-size: 16px;
     padding-right: 25px;
   }
@@ -201,12 +201,10 @@ body {
   width: 90vw;
   height: 90vh;
   background: rgb(255, 255, 255);
-  background: linear-gradient(
-    0deg,
-    rgba(255, 255, 255, 0.998) 0%,
-    rgba(255, 255, 255, 0.955) 50%,
-    rgba(255, 255, 255, 0) 100%
-  );
+  background: linear-gradient(0deg,
+      rgba(255, 255, 255, 0.998) 0%,
+      rgba(255, 255, 255, 0.955) 50%,
+      rgba(255, 255, 255, 0) 100%);
   z-index: 1;
 }
 
@@ -214,14 +212,12 @@ body {
   position: absolute;
   width: 90vw;
   height: 90vh;
-  
+
   background: nth($paleta-colores, 3);
-  background: linear-gradient(
-    0deg,
-    #2d4d4d 0%,
-    #2d4d4dfd 50%,
-    #2d4d4d00 100%
-  );
+  background: linear-gradient(0deg,
+      #2d4d4d 0%,
+      #2d4d4dfd 50%,
+      #2d4d4d00 100%);
   z-index: 2;
 }
 
@@ -230,14 +226,12 @@ body {
   position: absolute;
   width: 90vw;
   height: 90vh;
-  
+
   background: nth($paleta-colores, 1);
-  background: linear-gradient(
-    0deg,
-    #bcebbe 0%,
-    #bcebbefd 60%,
-    #bcebbe00 100%
-  );
+  background: linear-gradient(0deg,
+      #bcebbe 0%,
+      #bcebbefd 60%,
+      #bcebbe00 100%);
   z-index: 1;
 }
 
@@ -296,11 +290,11 @@ body {
     display: none;
   }
 
-  #personajes{
+  #personajes {
     display: none;
   }
 
-  #contenidoRecomendado{
+  #contenidoRecomendado {
     display: none;
   }
 }

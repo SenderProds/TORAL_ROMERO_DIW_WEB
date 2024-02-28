@@ -7,8 +7,9 @@
     <title>Libros</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@0,100..900&display=swap" rel="stylesheet">
- 
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@0,100..900&display=swap"
+        rel="stylesheet">
+
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="../estilos/principal.scss">
     <link rel="shortcut icon" href="../img/logoIcon.ico" type="image/x-icon">
@@ -43,7 +44,7 @@
                         <div></div><button>RECOMENDADO</button>
                     </a></li>
 
-                    <li><a href="../html/iniciarSesion.html">
+                <li><a href="../html/iniciarSesion.html">
                         <div></div><button id="btnSesion">INICIAR SESIÓN</button>
                     </a></li>
             </ul>
@@ -55,23 +56,49 @@
 
     <section id="contenido" class="df-column ai-center">
 
+
         <!--Destacados-->
         <article id="destacados" class="display-flex jc-space-around ai-end">
-            <div id="destSemana">LIBRO DE LA SEMANA</div>
-            <div>LIBRO DE EL MES</div>
-            <div>LIBRO MAS VENDIDO</div>
-            <div>AUTOR DESTACADO</div>
-            <div>PROMOCIONES</div>
-           
-           
+            <h1>Autores Destacados</h1>
+
+
+            <div>
+                <div id="destSemana">
+                    <img src="../img/personajes/robert_kiyosaki_200px-min.png" alt="">
+                    <span>Robert Kiyosaki</span>
+                </div>
+
+                <div>
+                    <img src="../img/personajes/stephen_covey_200px-min.png" alt="">
+                    <span>Stephen Covey</span>
+                </div>
+
+                <div>
+                    <img src="../img/personajes/napoleon_hill_200px-min.png" alt="">
+                    <span>Napoleon Hill</span>
+                </div>
+
+                <div>
+                    <img src="../img/personajes/eric_ries_200px-min.png" alt="">
+                    <span>Eric Ries</span>
+                </div>
+
+                <div>
+                    <img src="../img/personajes/james_clear_200px-min.png" alt="">
+                    <span>James Clear</span>
+                </div>
+            </div>
+
+
+
         </article>
 
-        
+
 
         <!--Filtros-->
         <article id="filtros" class="display-flex ai-center jc-space-around">
             <i class="bi bi-funnel">Filtro</i>
-            
+
             <div id="contenedorValoracion">
                 <label for="valoracion">Valoracion <i class="bi bi-star-fill"></i></label>
                 <select name="valoracion" id="valoracion">
@@ -80,14 +107,14 @@
                     <option value="">3 estrellas</option>
                     <option value="">2 estrellas</option>
                     <option value="">1 estrellas</option>
-    
-    
-    
+
+
+
                 </select>
             </div>
 
             <div id="contenedorPrecio">
-                
+
                 <label for="precioMin">Precio Minimo: </label>
                 <select name="precioMin" id="precioMin">
                     <option value="0">0€</option>
@@ -107,7 +134,7 @@
                 </select>
 
             </div>
-            
+
         </article>
 
 
@@ -116,17 +143,112 @@
         <!--Libros-->
         <article id="libros" class="display-grid ai-center ji-center">
 
-            <article class="libro">
+            <article class="libro" data-autor="Clear James">
 
                 <a href="libros/libro1.html" class="enlaceLibro"><button></button></a>
-                <img src="https://th.bing.com/th/id/R.e0f76658273f10ffc84f1a800472c1d9?rik=FLFB33BmjAAqUg&riu=http%3a%2f%2fwww.granvalparaiso.cl%2fwp-content%2fuploads%2f2014%2f09%2flos-7-habitos-de-la-gente-altamente-efectiva_9788449324949.jpg&ehk=4PwHFKb2fTrsNqnFb5Q5THagRJgVtWmH%2bT4AdIddAw8%3d&risl=&pid=ImgRaw&r=0"
+                <img src="../img/libros/min/habitos_atomicos_200px-min.png"
                     alt="">
                 <hr>
                 <article>
-                    <h1>Los 7 habitos de la gente ...</h1>
+                    <h1>Habitos Atomicos</h1>
                     <article class="info ">
 
-                        <div class="precio">19.90€</div>
+                        <div class="precio">18.90€</div>
+                        <div class="star">
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star"></i>(5)
+                        </div>
+                        <div class="envio">¡ENVÍO GRATIS!<i class="bi bi-truck"></i></div>
+
+                    </article>
+
+                    <article class="btnLibro ">
+                        <a href="libros/libro1.html"><button>VER</button></a>
+                        <button id="btnAdd">AÑADIR</button>
+                    </article>
+
+                </article>
+
+            </article>
+            
+
+
+            <article class="libro" data-autor="Robert Kiyosaki">
+
+                <a href="libros/libro1.html" class="enlaceLibro"><button></button></a>
+                <img src="../img/libros/min/padre_rico_padre_pobre_200px.png"
+                    alt="">
+                <hr>
+                <article>
+                    <h1>Padre Rico Padre Pobre</h1>
+                    <article class="info ">
+
+                        <div class="precio">10.40€</div>
+                        <div class="star">
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star"></i>(5)
+                        </div>
+                        <div class="envio">¡ENVÍO GRATIS!<i class="bi bi-truck"></i></div>
+
+                    </article>
+
+                    <article class="btnLibro ">
+                        <a href="libros/libro1.html"><button>VER</button></a>
+                        <button id="btnAdd">AÑADIR</button>
+                    </article>
+
+                </article>
+
+            </article>
+
+            <article class="libro" data-autor="Napoleon Hill">
+
+                <a href="libros/libro1.html" class="enlaceLibro"><button></button></a>
+                <img src="../img/libros/min/piensa_y_hagase_rico_200px.png"
+                    alt="">
+                <hr>
+                <article>
+                    <h1>Piensa y hagase rico</h1>
+                    <article class="info ">
+
+                        <div class="precio">6,95€</div>
+                        <div class="star">
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star"></i>(5)
+                        </div>
+                        <div class="envio">¡ENVÍO GRATIS!<i class="bi bi-truck"></i></div>
+
+                    </article>
+
+                    <article class="btnLibro ">
+                        <a href="libros/libro1.html"><button>VER</button></a>
+                        <button id="btnAdd">AÑADIR</button>
+                    </article>
+
+                </article>
+
+            </article>
+
+            <article class="libro" data-autor="Walter Isaacson">
+
+                <a href="libros/libro1.html" class="enlaceLibro"><button></button></a>
+                <img src="../img/libros/min/steve_jobs_200px.png"
+                    alt="">
+                <hr>
+                <article>
+                    <h1>Steve Jobs</h1>
+                    <article class="info ">
+
+                        <div class="precio">16,05€</div>
                         <div class="star">
                             <i class="bi bi-star-fill"></i>
                             <i class="bi bi-star-fill"></i>
@@ -148,17 +270,18 @@
             </article>
 
 
-            <article class="libro">
 
+            <article class="libro" data-autor="Seth Godin">
 
-                <img src="https://th.bing.com/th/id/R.e0f76658273f10ffc84f1a800472c1d9?rik=FLFB33BmjAAqUg&riu=http%3a%2f%2fwww.granvalparaiso.cl%2fwp-content%2fuploads%2f2014%2f09%2flos-7-habitos-de-la-gente-altamente-efectiva_9788449324949.jpg&ehk=4PwHFKb2fTrsNqnFb5Q5THagRJgVtWmH%2bT4AdIddAw8%3d&risl=&pid=ImgRaw&r=0"
+                <a href="libros/libro1.html" class="enlaceLibro"><button></button></a>
+                <img src="../img/libros/min/vaca_purpura_200px.png"
                     alt="">
                 <hr>
                 <article>
-                    <h1>Los 7 habitos de la gente ...</h1>
+                    <h1>La Vaca Purpura</h1>
                     <article class="info ">
 
-                        <div class="precio">19.90€</div>
+                        <div class="precio">18,95€</div>
                         <div class="star">
                             <i class="bi bi-star-fill"></i>
                             <i class="bi bi-star-fill"></i>
@@ -171,7 +294,7 @@
                     </article>
 
                     <article class="btnLibro ">
-                        <button>VER</button>
+                        <a href="libros/libro1.html"><button>VER</button></a>
                         <button id="btnAdd">AÑADIR</button>
                     </article>
 
@@ -180,17 +303,19 @@
             </article>
 
 
-            <article class="libro">
 
 
-                <img src="https://th.bing.com/th/id/R.e0f76658273f10ffc84f1a800472c1d9?rik=FLFB33BmjAAqUg&riu=http%3a%2f%2fwww.granvalparaiso.cl%2fwp-content%2fuploads%2f2014%2f09%2flos-7-habitos-de-la-gente-altamente-efectiva_9788449324949.jpg&ehk=4PwHFKb2fTrsNqnFb5Q5THagRJgVtWmH%2bT4AdIddAw8%3d&risl=&pid=ImgRaw&r=0"
+            <article class="libro" data-autor="Phil Knight">
+
+                <a href="libros/libro1.html" class="enlaceLibro"><button></button></a>
+                <img src="../img/libros/min/nunca_te_pares_200px.jpg"
                     alt="">
                 <hr>
                 <article>
-                    <h1>Los 7 habitos de la gente ...</h1>
+                    <h1>Nunca Te Pares</h1>
                     <article class="info ">
 
-                        <div class="precio">19.90€</div>
+                        <div class="precio">18,90€</div>
                         <div class="star">
                             <i class="bi bi-star-fill"></i>
                             <i class="bi bi-star-fill"></i>
@@ -203,7 +328,7 @@
                     </article>
 
                     <article class="btnLibro ">
-                        <button>VER</button>
+                        <a href="libros/libro1.html"><button>VER</button></a>
                         <button id="btnAdd">AÑADIR</button>
                     </article>
 
@@ -212,17 +337,19 @@
             </article>
 
 
-            <article class="libro">
 
 
-                <img src="https://th.bing.com/th/id/R.e0f76658273f10ffc84f1a800472c1d9?rik=FLFB33BmjAAqUg&riu=http%3a%2f%2fwww.granvalparaiso.cl%2fwp-content%2fuploads%2f2014%2f09%2flos-7-habitos-de-la-gente-altamente-efectiva_9788449324949.jpg&ehk=4PwHFKb2fTrsNqnFb5Q5THagRJgVtWmH%2bT4AdIddAw8%3d&risl=&pid=ImgRaw&r=0"
+            <article class="libro" data-autor="Eric Ries">
+
+                <a href="libros/libro1.html" class="enlaceLibro"><button></button></a>
+                <img src="../img/libros/min/lean_startup_200px.png"
                     alt="">
                 <hr>
                 <article>
-                    <h1>Los 7 habitos de la gente ...</h1>
+                    <h1>El metodo Lean Startup</h1>
                     <article class="info ">
 
-                        <div class="precio">19.90€</div>
+                        <div class="precio">8,54€</div>
                         <div class="star">
                             <i class="bi bi-star-fill"></i>
                             <i class="bi bi-star-fill"></i>
@@ -235,7 +362,7 @@
                     </article>
 
                     <article class="btnLibro ">
-                        <button>VER</button>
+                        <a href="libros/libro1.html"><button>VER</button></a>
                         <button id="btnAdd">AÑADIR</button>
                     </article>
 
@@ -244,17 +371,17 @@
             </article>
 
 
-            <article class="libro">
+            <article class="libro" data-autor="Jr Macgregor">
 
-
-                <img src="https://th.bing.com/th/id/R.e0f76658273f10ffc84f1a800472c1d9?rik=FLFB33BmjAAqUg&riu=http%3a%2f%2fwww.granvalparaiso.cl%2fwp-content%2fuploads%2f2014%2f09%2flos-7-habitos-de-la-gente-altamente-efectiva_9788449324949.jpg&ehk=4PwHFKb2fTrsNqnFb5Q5THagRJgVtWmH%2bT4AdIddAw8%3d&risl=&pid=ImgRaw&r=0"
+                <a href="libros/libro1.html" class="enlaceLibro"><button></button></a>
+                <img src="../img/libros/min/jeff_bezos_200px.png"
                     alt="">
                 <hr>
                 <article>
-                    <h1>Los 7 habitos de la gente ...</h1>
+                    <h1>Jeff Bezos</h1>
                     <article class="info ">
 
-                        <div class="precio">19.90€</div>
+                        <div class="precio">14,60€</div>
                         <div class="star">
                             <i class="bi bi-star-fill"></i>
                             <i class="bi bi-star-fill"></i>
@@ -267,7 +394,7 @@
                     </article>
 
                     <article class="btnLibro ">
-                        <button>VER</button>
+                        <a href="libros/libro1.html"><button>VER</button></a>
                         <button id="btnAdd">AÑADIR</button>
                     </article>
 
@@ -276,17 +403,19 @@
             </article>
 
 
-            <article class="libro">
+            
 
+            <article class="libro" data-autor="Mark Manson">
 
-                <img src="https://th.bing.com/th/id/R.e0f76658273f10ffc84f1a800472c1d9?rik=FLFB33BmjAAqUg&riu=http%3a%2f%2fwww.granvalparaiso.cl%2fwp-content%2fuploads%2f2014%2f09%2flos-7-habitos-de-la-gente-altamente-efectiva_9788449324949.jpg&ehk=4PwHFKb2fTrsNqnFb5Q5THagRJgVtWmH%2bT4AdIddAw8%3d&risl=&pid=ImgRaw&r=0"
+                <a href="libros/libro1.html" class="enlaceLibro"><button></button></a>
+                <img src="../img/libros/min/el_sutil_arte_200px.png"
                     alt="">
                 <hr>
                 <article>
-                    <h1>Los 7 habitos de la gente ...</h1>
+                    <h1>El sutil arte de que casi ...</h1>
                     <article class="info ">
 
-                        <div class="precio">19.90€</div>
+                        <div class="precio">16,05€</div>
                         <div class="star">
                             <i class="bi bi-star-fill"></i>
                             <i class="bi bi-star-fill"></i>
@@ -299,7 +428,7 @@
                     </article>
 
                     <article class="btnLibro ">
-                        <button>VER</button>
+                        <a href="libros/libro1.html"><button>VER</button></a>
                         <button id="btnAdd">AÑADIR</button>
                     </article>
 
@@ -308,17 +437,17 @@
             </article>
 
 
-            <article class="libro">
+            <article class="libro" data-autor="Robin Sharma">
 
-
-                <img src="https://th.bing.com/th/id/R.e0f76658273f10ffc84f1a800472c1d9?rik=FLFB33BmjAAqUg&riu=http%3a%2f%2fwww.granvalparaiso.cl%2fwp-content%2fuploads%2f2014%2f09%2flos-7-habitos-de-la-gente-altamente-efectiva_9788449324949.jpg&ehk=4PwHFKb2fTrsNqnFb5Q5THagRJgVtWmH%2bT4AdIddAw8%3d&risl=&pid=ImgRaw&r=0"
+                <a href="libros/libro1.html" class="enlaceLibro"><button></button></a>
+                <img src="../img/libros/min/el_monje_que_vendio_200px.png"
                     alt="">
                 <hr>
                 <article>
-                    <h1>Los 7 habitos de la gente ...</h1>
+                    <h1>El monje que vendio...</h1>
                     <article class="info ">
 
-                        <div class="precio">19.90€</div>
+                        <div class="precio">10,40€</div>
                         <div class="star">
                             <i class="bi bi-star-fill"></i>
                             <i class="bi bi-star-fill"></i>
@@ -331,7 +460,7 @@
                     </article>
 
                     <article class="btnLibro ">
-                        <button>VER</button>
+                        <a href="libros/libro1.html"><button>VER</button></a>
                         <button id="btnAdd">AÑADIR</button>
                     </article>
 
@@ -340,17 +469,18 @@
             </article>
 
 
-            <article class="libro">
 
+            <article class="libro" data-autor="Thomas J.Stanley">
 
-                <img src="https://th.bing.com/th/id/R.e0f76658273f10ffc84f1a800472c1d9?rik=FLFB33BmjAAqUg&riu=http%3a%2f%2fwww.granvalparaiso.cl%2fwp-content%2fuploads%2f2014%2f09%2flos-7-habitos-de-la-gente-altamente-efectiva_9788449324949.jpg&ehk=4PwHFKb2fTrsNqnFb5Q5THagRJgVtWmH%2bT4AdIddAw8%3d&risl=&pid=ImgRaw&r=0"
+                <a href="libros/libro1.html" class="enlaceLibro"><button></button></a>
+                <img src="../img/libros/min/el_millonario_de_la_puerta_de_al_lado_200px.png"
                     alt="">
                 <hr>
                 <article>
-                    <h1>Los 7 habitos de la gente ...</h1>
+                    <h1>El millonario de la puerta ...</h1>
                     <article class="info ">
 
-                        <div class="precio">19.90€</div>
+                        <div class="precio">14,25€</div>
                         <div class="star">
                             <i class="bi bi-star-fill"></i>
                             <i class="bi bi-star-fill"></i>
@@ -363,7 +493,7 @@
                     </article>
 
                     <article class="btnLibro ">
-                        <button>VER</button>
+                        <a href="libros/libro1.html"><button>VER</button></a>
                         <button id="btnAdd">AÑADIR</button>
                     </article>
 
@@ -372,17 +502,17 @@
             </article>
 
 
-            <article class="libro">
+            <article class="libro" data-autor="George S.Clason">
 
-
-                <img src="https://th.bing.com/th/id/R.e0f76658273f10ffc84f1a800472c1d9?rik=FLFB33BmjAAqUg&riu=http%3a%2f%2fwww.granvalparaiso.cl%2fwp-content%2fuploads%2f2014%2f09%2flos-7-habitos-de-la-gente-altamente-efectiva_9788449324949.jpg&ehk=4PwHFKb2fTrsNqnFb5Q5THagRJgVtWmH%2bT4AdIddAw8%3d&risl=&pid=ImgRaw&r=0"
+                <a href="libros/libro1.html" class="enlaceLibro"><button></button></a>
+                <img src="../img/libros/min/el_hombre_mas_rico_de_babilonia_200px.png"
                     alt="">
                 <hr>
                 <article>
-                    <h1>Los 7 habitos de la gente ...</h1>
+                    <h1>El hombre mas rico ...</h1>
                     <article class="info ">
 
-                        <div class="precio">19.90€</div>
+                        <div class="precio">8,07€</div>
                         <div class="star">
                             <i class="bi bi-star-fill"></i>
                             <i class="bi bi-star-fill"></i>
@@ -395,7 +525,7 @@
                     </article>
 
                     <article class="btnLibro ">
-                        <button>VER</button>
+                        <a href="libros/libro1.html"><button>VER</button></a>
                         <button id="btnAdd">AÑADIR</button>
                     </article>
 
@@ -404,17 +534,18 @@
             </article>
 
 
-            <article class="libro">
 
+            <article class="libro" data-autor="Raimon Samso">
 
-                <img src="https://th.bing.com/th/id/R.e0f76658273f10ffc84f1a800472c1d9?rik=FLFB33BmjAAqUg&riu=http%3a%2f%2fwww.granvalparaiso.cl%2fwp-content%2fuploads%2f2014%2f09%2flos-7-habitos-de-la-gente-altamente-efectiva_9788449324949.jpg&ehk=4PwHFKb2fTrsNqnFb5Q5THagRJgVtWmH%2bT4AdIddAw8%3d&risl=&pid=ImgRaw&r=0"
+                <a href="libros/libro1.html" class="enlaceLibro"><button></button></a>
+                <img src="../img/libros/min/codigo_del_dinero_200px.png"
                     alt="">
                 <hr>
                 <article>
-                    <h1>Los 7 habitos de la gente ...</h1>
+                    <h1>El codigo del dinero</h1>
                     <article class="info ">
 
-                        <div class="precio">19.90€</div>
+                        <div class="precio">14,25€</div>
                         <div class="star">
                             <i class="bi bi-star-fill"></i>
                             <i class="bi bi-star-fill"></i>
@@ -427,7 +558,7 @@
                     </article>
 
                     <article class="btnLibro ">
-                        <button>VER</button>
+                        <a href="libros/libro1.html"><button>VER</button></a>
                         <button id="btnAdd">AÑADIR</button>
                     </article>
 
@@ -436,17 +567,18 @@
             </article>
 
 
-            <article class="libro">
 
+            <article class="libro" data-autor="Ashlee Vance">
 
-                <img src="https://th.bing.com/th/id/R.e0f76658273f10ffc84f1a800472c1d9?rik=FLFB33BmjAAqUg&riu=http%3a%2f%2fwww.granvalparaiso.cl%2fwp-content%2fuploads%2f2014%2f09%2flos-7-habitos-de-la-gente-altamente-efectiva_9788449324949.jpg&ehk=4PwHFKb2fTrsNqnFb5Q5THagRJgVtWmH%2bT4AdIddAw8%3d&risl=&pid=ImgRaw&r=0"
+                <a href="libros/libro1.html" class="enlaceLibro"><button></button></a>
+                <img src="../img/libros/min/book_Elonk_Musk_200px.png"
                     alt="">
                 <hr>
                 <article>
-                    <h1>Los 7 habitos de la gente ...</h1>
+                    <h1>Elonk Musk</h1>
                     <article class="info ">
 
-                        <div class="precio">19.90€</div>
+                        <div class="precio">10,40€</div>
                         <div class="star">
                             <i class="bi bi-star-fill"></i>
                             <i class="bi bi-star-fill"></i>
@@ -459,7 +591,73 @@
                     </article>
 
                     <article class="btnLibro ">
-                        <button>VER</button>
+                        <a href="libros/libro1.html"><button>VER</button></a>
+                        <button id="btnAdd">AÑADIR</button>
+                    </article>
+
+                </article>
+
+            </article>
+
+
+
+            <article class="libro" data-autor="Alex Ochoa Aspuru">
+
+                <a href="libros/libro1.html" class="enlaceLibro"><button></button></a>
+                <img src="../img/libros/min/actitud_salmon_200px.png"
+                    alt="">
+                <hr>
+                <article>
+                    <h1>Actitud Salmon</h1>
+                    <article class="info ">
+
+                        <div class="precio">12,99€</div>
+                        <div class="star">
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star"></i>(5)
+                        </div>
+                        <div class="envio">¡ENVÍO GRATIS!<i class="bi bi-truck"></i></div>
+
+                    </article>
+
+                    <article class="btnLibro ">
+                        <a href="libros/libro1.html"><button>VER</button></a>
+                        <button id="btnAdd">AÑADIR</button>
+                    </article>
+
+                </article>
+
+            </article>
+
+
+
+            <article class="libro" data-autor="Enrique Moris">
+
+                <a href="libros/libro1.html" class="enlaceLibro"><button></button></a>
+                <img src="../img/libros/min/22_pasos_200px.png"
+                    alt="">
+                <hr>
+                <article>
+                    <h1>A 22 pasos del exito</h1>
+                    <article class="info ">
+
+                        <div class="precio">14,44€</div>
+                        <div class="star">
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star"></i>(5)
+                        </div>
+                        <div class="envio">¡ENVÍO GRATIS!<i class="bi bi-truck"></i></div>
+
+                    </article>
+
+                    <article class="btnLibro ">
+                        <a href="libros/libro1.html"><button>VER</button></a>
                         <button id="btnAdd">AÑADIR</button>
                     </article>
 
@@ -471,7 +669,7 @@
         </article>
 
         <div id="carrito" class="ocultar"><i class="bi bi-bag"><a href="carrito.html"></a></i>
-        <div id="productos"></div>
+            <div id="productos"></div>
         </div>
     </section>
 
