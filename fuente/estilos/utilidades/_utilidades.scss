@@ -62,3 +62,15 @@
   .border-radius-20{
     border-radius: 20px;
   }
+
+  .fade-in {
+    animation: fadeIn 2s ease-in-out;
+  }
+  
+  .fade-in-5s {
+    animation: fadeIn 5s ease-in-out;
+  }
+  
+  .bi { //Clase que se le aplica a los iconos de bootstrap
+    margin: 0;
+  }

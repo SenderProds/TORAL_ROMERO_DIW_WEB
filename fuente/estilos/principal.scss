@@ -1,12 +1,23 @@
-@import "variables";
-@import "utilidades";
+
+//Utilidades
+@import "utilidades/variables"; 
+@import "utilidades/utilidades"; //Clases de utilidad
+@import "utilidades/mixins";//Mixins para media querys
+
+//Estilos varios
 @import "varios";
+
+//Layout
 @import "layout/base";
 @import "layout/footer";
+@import "layout/header";
+
+//Paginas
 @import "paginas/home";
 @import "paginas/libros";
 @import "paginas/iniciarSesion";
 @import "paginas/recomendado";
 @import "paginas/consejos";
-@import "layout/header";
+@import "paginas/carrito";
+
 

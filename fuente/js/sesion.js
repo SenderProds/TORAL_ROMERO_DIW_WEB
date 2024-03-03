@@ -28,7 +28,8 @@ function comprobarSesion() {
         btnSesion.textContent = "CUENTA";
         if(document.getElementById("contenidoLogin")){
             document.getElementById("contenidoLogin").classList.add("ocultar");
-            document.getElementById("usuario").innerHTML = JSON.parse(localStorage.getItem("sesion")).user;
+            document.getElementById("cuenta").classList.add("df-column");
+            
             document.getElementById("cuenta").classList.remove("ocultar");
             document.getElementById("cuenta").classList.add("cuenta");
             document.getElementById("cerrarSesion").addEventListener('click', (e) => {
@@ -39,12 +40,16 @@ function comprobarSesion() {
 
         }
     } else {
-        if(document.getElementById("contenidoLogin").classList.has("ocultar")){
+        if(document.getElementById("contenidoLogin").classList.contains("ocultar")){
             document.getElementById("cuenta").classList.add("ocultar");
+            document.getElementById("cuenta").classList.remove("df-column");
+            document.getElementById("contenidoLogin").classList.remove("ocultar")
             
         }else{
-            document.getElementById("cuenta").classList.remove("ocultar");
-            document.getElementById("cuenta").classList.add("cuenta");
+            document.getElementById("cuenta").classList.add("ocultar");
+            document.getElementById("cuenta").classList.remove("cuenta");
+            document.getElementById("contenidoLogin").classList.remove("ocultar")
+
 
         }
         btnSesion.textContent = "INICIAR SESION";

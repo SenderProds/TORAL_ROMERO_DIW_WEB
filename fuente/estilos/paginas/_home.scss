@@ -1,10 +1,21 @@
-html,
-body {
-  margin: 0;
-  padding: 0;
-  height: 100vh;
+
+// Estilos para el contenedor principal
+#contenido {
+  section {
+    height: 100vh;
+  }
+
+  section:not(#presentacion) article {
+    width: 80vw;
+  }
+
+  section:not(#presentacion) h1 {
+    font-family: $fuente-texto-primaria;
+    font-size: $clamp-h1;
+  }
 }
 
+// Sección principal que contiene un título y el logo de la página
 #presentacion {
   background-color: nth($paleta-colores, 3);
   color: nth($paleta-colores, 1);
@@ -26,6 +37,19 @@ body {
   height: 50px;
 }
 
+#parte1 ,
+#parte2 ,
+#parte3 ,
+#parte4 p {
+  font-family: $fuente-texto-secundaria;
+  font-weight: bold;
+  text-align: center;
+  font-size: $clamp-p;
+  text-decoration: none;
+  margin: 0;
+}
+
+// Parte 1
 #parte1 {
   background-color: nth($paleta-colores, 4);
   color: nth($paleta-colores, 3);
@@ -36,18 +60,14 @@ body {
   }
 }
 
-#parte1 p,
-#parte2,
-#parte3 p,
-#parte4 p {
-  font-family: $fuente-texto-secundaria;
-  font-weight: bold;
+#parte1 h1 {
   text-align: center;
-  font-size: $clamp-p;
-  text-decoration: none;
+  font-weight: 700;
   margin: 0;
+  padding: 0;
 }
 
+// Estilos para la sección 2
 #parte2 {
   background-color: nth($paleta-colores, 3);
   color: nth($paleta-colores, 4);
@@ -58,6 +78,14 @@ body {
   }
 }
 
+#parte2 h1 {
+  text-align: center;
+  font-weight: 700;
+  margin: 0;
+  padding: 0;
+}
+
+// Estilos para la sección 3
 #parte3 {
   background-color: nth($paleta-colores, 1);
   color: nth($paleta-colores, 2);
@@ -67,6 +95,14 @@ body {
   }
 }
 
+#parte3 h1 {
+  text-align: center;
+  font-weight: 700;
+  margin: 0;
+  padding: 0;
+}
+
+// Estilos para la sección 4
 #parte4 {
   background-color: nth($paleta-colores, 4);
   color: nth($paleta-colores, 2);
@@ -86,34 +122,23 @@ body {
   }
 }
 
+// Contenedor principal
 #contenido {
   section {
     height: 100vh;
   }
 
-  section:not(presentacion) article {
+  section:not(#presentacion) article {
     width: 80vw;
   }
 
-  section:not(presentacion) h1 {
+  section:not(#presentacion) h1 {
     font-family: $fuente-texto-primaria;
     font-size: $clamp-h1;
   }
 }
 
-#parte1 h1,
-#parte2 h1,
-#parte3 h1 {
-
-  text-align: center;
-  font-weight: 700;
-  margin: 0;
-  padding: 0;
-
-}
-
-
-
+// Estilos para el collage de imágenes de fondo
 .collage {
   position: absolute;
   width: 80vw;
@@ -130,7 +155,7 @@ body {
   }
 }
 
-
+// Miniaturas de fondo de la sección 2 del home
 #contenidoRecomendado {
   position: absolute;
   width: 80vw;
@@ -149,6 +174,7 @@ body {
   }
 }
 
+// Grupo de tarjetas de personajes de fondo
 #personajes {
   position: absolute;
   box-sizing: border-box;
@@ -165,6 +191,7 @@ body {
   z-index: 0;
 }
 
+// Cada tarjeta de personajes
 .psj {
   display: flex;
   justify-content: space-between;
@@ -183,9 +210,7 @@ body {
   img {
     border-radius: 70px;
     height: 55px;
-
   }
-
 
   p {
     font-size: 16px;
@@ -193,9 +218,7 @@ body {
   }
 }
 
-
-
-
+// Se aplica un degradado sobre el collage de las imágenes de los libros del menú principal
 #degradado {
   position: absolute;
   width: 90vw;
@@ -208,6 +231,7 @@ body {
   z-index: 1;
 }
 
+// Degradado de personajes
 #degradadoPersonajes {
   position: absolute;
   width: 90vw;
@@ -221,7 +245,7 @@ body {
   z-index: 2;
 }
 
-
+// Degradado de contenido
 #degradadoContenido {
   position: absolute;
   width: 90vw;
@@ -231,12 +255,13 @@ body {
   background: linear-gradient(0deg,
       #bcebbe 0%,
       #bcebbefd 60%,
-      #bcebbe00 100%);
+      #bcebbe00
+
+ 100%);
   z-index: 1;
 }
 
-
-
+// Animación que empieza con una opacidad de 0 y termina con 1 que sería totalmente visible
 @keyframes fadeIn {
   0% {
     opacity: 0;
@@ -247,18 +272,7 @@ body {
   }
 }
 
-.fade-in {
-  animation: fadeIn 2s ease-in-out;
-}
-
-.fade-in-5s {
-  animation: fadeIn 5s ease-in-out;
-}
-
-.bi {
-  margin: 0;
-}
-
+// Se le aplica un clamp a los iconos para que se adapten
 .bi-book,
 .bi-bar-chart-line,
 .bi-camera-reels,
@@ -268,13 +282,14 @@ body {
   position: relative;
 }
 
+// Cuando se pase el ratón sobre un icono saldrá una sombra detrás
 .icon:hover {
   text-shadow: 3px 3px black;
 }
 
-/************MOVIL*************/
+/************MÓVIL*************/
 
-@media screen and (max-width: 800px) {
+@include para-tablets-850{
   article p {
     max-width: 100%;
     text-align: center;
@@ -285,7 +300,7 @@ body {
   }
 }
 
-@media screen and (max-width: 450px) {
+@include para-movil{
   #collage {
     display: none;
   }
@@ -299,34 +314,34 @@ body {
   }
 }
 
-@media screen and (max-width: 1000px) and (max-height: 500px) and (orientation: landscape) {
+@include para-movil-horizontal{
   #presentacion h3 {
     font-size: 14px;
   }
 
-  #contenido section:not(presentacion) h1 {
+  #contenido section:not(#presentacion) h1 {
     font-family: $fuente-texto-primaria;
     font-size: 28px;
   }
 }
 
-@media screen and (max-width: 700px) and (max-height: 400px) and (orientation: landscape) {
+@include para-pantallas-anchas-bajas-700-400{
   #presentacion h3 {
     font-size: 14px;
   }
 
-  #contenido section:not(presentacion) h1 {
+  #contenido section:not(#presentacion) h1 {
     font-family: $fuente-texto-primaria;
     font-size: 28px;
   }
 }
 
-@media screen and (max-width: 700px) and (max-height: 500px) and (orientation: landscape) {
+@include para-pantallas-anchas-bajas-700-500{
   #presentacion h3 {
     font-size: 12px;
   }
 
-  #contenido section:not(presentacion) h1 {
+  #contenido section:not(#presentacion) h1 {
     font-family: $fuente-texto-primaria;
     font-size: 20px;
   }

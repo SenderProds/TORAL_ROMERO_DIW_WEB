@@ -1,9 +1,10 @@
+// Estilos base
 body {
   font-family: $fuente-texto-secundaria;
   margin: 0;
 }
 
-//Header
+// Estilos del encabezado
 header {
   background-color: nth($paleta-colores, 2);
   margin: 0;
@@ -14,7 +15,9 @@ header {
   }
 }
 
+// Estilos del menú principal
 .menu {
+  // Estilos de botones del menú
   button {
     width: 100%;
     height: 90%;
@@ -23,18 +26,21 @@ header {
     border: none;
     outline: none;
     box-shadow: none;
+    
+    // Efecto hover para los botones del menú
+    &:hover {
+      background: linear-gradient(#bcebbea2, #10292a);
+    }
   }
 
-  button:hover {
-    background: linear-gradient(#bcebbea2, #10292a);
-  }
-
+  // Barras decorativas en el menú
   div {
     width: 100%;
     height: 3px;
     background-color: nth($paleta-colores, 1);
   }
 
+  // Estilos de la lista del menú
   ul {
     margin: 0;
 
@@ -45,21 +51,47 @@ header {
   }
 }
 
+// Estilos para el logo de la página
 .logoPagina {
   cursor: pointer;
 }
 
+// Botones para abrir y cerrar el menú en móviles
 .abrir-menu,
 .cerrar-menu {
   font-size: 30px;
   display: none;
+  
 }
 
+// Botones dentro de la lista del menú
 .lista button {
   cursor: pointer;
 }
 
-@media screen and (max-width: 850px) {
+
+// Estilos del pie de página
+footer {
+  background-color: nth($paleta-colores, 2);
+
+  // Estilos para el título en el pie de página
+  h1 {
+    font-family: $fuente-texto-secundaria;
+    font-size: 18px;
+    color: nth($paleta-colores, 1);
+  }
+
+  // Estilos para enlaces en el pie de página
+  a {
+    text-decoration: none;
+    color: nth($paleta-colores, 4);
+  }
+}
+
+
+// Menú para tablets y dispositivos móviles
+
+@include para-tablets-850{
   .abrir-menu,
   .cerrar-menu {
     border: 0;
@@ -68,6 +100,7 @@ header {
     color: nth($paleta-colores, 1);
   }
 
+  // Menú oculto por defecto en móviles
   .menu {
     opacity: 0;
     visibility: hidden;
@@ -76,53 +109,34 @@ header {
     box-shadow: 40px 0px 50px white;
   }
 
+  // Menú visible al activarse
   .visible {
     opacity: 1;
     visibility: visible;
   }
 
+  // Ajustes para la lista del menú en móviles
   .lista{
     padding-left: 0;
   }
 
   .menu ul li {
     list-style: none;
-    
   }
 }
 
-@media screen and (max-width: 180px) {
-
-  .menu{
-    padding: 0;
-  }
-  
-
-  .menu ul li {
-    list-style: none;
-    margin-left: 0px;
-
-  }
-
-  .menu ul li a button{
-    font-size: 12px;
-  }
-
-}
-
-@media screen and (max-width: 1900px) and (max-height: 500px)and (orientation: landscape){
 
 
+// Ajustes para pantallas anchas y bajas
+@include para-pantallas-anchas-bajas-1900-500{
   .menu ul li {
     list-style: none;
     margin-left: 0px;
   }
-  
 }
 
-
-
-@media screen and (max-width: 900px) and (max-height: 290px) and (orientation: landscape) {
+// Ajustes para paisajes estrechos
+@include para-pantallas-anchas-bajas-900-290{
   .cerrar-menu{
     font-size: 25px;
   }
@@ -138,26 +152,11 @@ header {
 }
 
 
-//Footer
 
-footer {
-  background-color: nth($paleta-colores, 2);
-
-  h1 {
-    font-family: $fuente-texto-secundaria;
-    font-size: 18px;
-    color: nth($paleta-colores, 1);
-  }
-
-  a {
-    text-decoration: none;
-    color: nth($paleta-colores, 4);
-  }
-}
-
-@media screen and (max-width: 800px) {
+// Ajustes de footer para móviles
+@include para-tablets-800 {
   footer article {
-    margin-top: 0%;
+    margin-top: 0;
   }
 
   footer h1 {
@@ -165,7 +164,8 @@ footer {
   }
 }
 
-@media screen and (max-width: 800px) and (max-height: 450px) and (orientation: landscape) {
+// Ajustes de footer para dispositivos en orientación paisaje
+@include para-pantallas-anchas-bajas-800-450{
   footer h1 {
     font-size: 13px;
   }

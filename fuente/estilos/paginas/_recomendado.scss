@@ -1,4 +1,4 @@
-
+// Estilos del título
 #titulo{
     width: 100%;
     height: 180px;
@@ -10,10 +10,12 @@
     }
 }
 
+// Estilos de la sección recomendada
 #seccionRecomendado { 
     width: 100%;
     margin-bottom: 10px;
 
+    // Estilos de los videos
     .videos {
         margin-top: 3%;
         height: 80%;
@@ -23,6 +25,7 @@
         grid-gap: 6rem;
         justify-items: center;
 
+        // Estilos de cada video
         .video {
             height: 200px;
             width: 355px;
@@ -62,7 +65,6 @@
             >.videoInfo{
                 display: none;
                 position: relative;
-                
                 text-align: center;
                 background-color: rgba(255, 255, 255, 0.76);
                 border-radius: 15px;
@@ -73,7 +75,7 @@
             }
         }
 
-
+        // Efecto hover sobre los videos
         .video:hover{
             cursor: pointer;
             >img {
@@ -92,23 +94,18 @@
             >.videoInfo{
                 transition:ease-in-out .12s;
                 display: block;
-                
                 background-color: rgba(0, 0, 0, 0.596);
                 box-shadow: 0px 0px 10px 2px rgba(255, 255, 255, 0.356);
                 z-index: 4;
                 text-align: center;
                 >p{
-                   
                     margin: 10px;
                     color: white;
                     >.bi{
                         margin: 4px;
                     }
                 }
-
-                
             }
         }
     }
-
 }

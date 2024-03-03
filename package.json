@@ -20,5 +20,8 @@
     "parcel": "^2.11.0",
     "parcel-plugin-imagemin": "^4.0.2",
     "rimraf": "^5.0.5"
+  },
+  "dependencies": {
+    "bootstrap-icons": "^1.11.3"
   }
 }

@@ -1,7 +1,10 @@
+
+// Estilos para el contenedor principal
 #contenido {
   width: 100%;
 }
 
+// Estilos para el botón de mostrar carrito
 .mostrarCarrito {
   position: fixed;
   width: 70px;
@@ -17,6 +20,7 @@
   color: nth($paleta-colores, 1);
   box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.442);
 
+  // Estilos para el contador de productos en el carrito
   #productos {
     text-align: center;
     position: fixed;
@@ -31,6 +35,7 @@
   }
 }
 
+// Estilos para la sección de destacados
 #destacados {
   width: 100%;
   height: 30vh;
@@ -39,16 +44,15 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin-top: 4%;
+  margin-top: 5%;
   color: white;
 
   > div {
-    
     display: flex;
     justify-content: space-around;
     width: 100%;
 
-    > div{
+    > div {
       margin-bottom: 3%;
       height: 150px;
       width: 150px;
@@ -62,24 +66,24 @@
       justify-content: center;
       font-weight: 800;
       color: white;
-  
-      img{
+
+      img {
         height: 100%;
         width: 100%;
         border-radius: 50%;
       }
 
-      span{
+      span {
         display: none;
       }
     }
 
-    > div:hover{
+    > div:hover {
       cursor: pointer;
       transition: ease-in-out .2s;
       transform: scale(1.1);
 
-      span{
+      span {
         transition: ease-in-out .2s;
         display: block;
         position: absolute;
@@ -88,20 +92,16 @@
         width: 100%;
         z-index: 0;
         overflow: hidden;
-  
       }
 
-      img{
+      img {
         filter: blur(1);
       }
     }
-   
   }
 }
 
-
-
-
+// Estilos para la sección de libros
 #libros {
   width: 90vw;
   margin-top: 10px;
@@ -111,6 +111,7 @@
   margin-bottom: 10px;
 }
 
+// Estilos para los filtros
 #filtros {
   width: 90vw;
   height: 50px;
@@ -136,6 +137,7 @@
   }
 }
 
+// Estilos para cada libro
 .libro {
   width: 250px;
   max-height: 350px;
@@ -225,6 +227,7 @@
   }
 }
 
+// Estilos adicionales al hacer hover sobre un libro
 .libro:hover {
   transition: ease-in-out 0.2s;
   box-shadow: 10px 10px 2px 0px nth($paleta-colores, 1);
@@ -241,94 +244,198 @@
   }
 }
 
-
+// Estilos para el enlace del libro
 .enlaceLibro {
+
+
   display: none;
 }
 
-.compra{
-  width: 80%;
+// Estilos para la información detallada del libro
+.infoLibro {
   display: flex;
-  justify-content: space-around;
-  align-items: center;
-  box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.398);
+  justify-content: center;
+  align-items: flex-start;
+  background: #f0f0f0;
+  padding: 2rem;
+  box-sizing: border-box;
 
-  
+  .prevLibro, .descrpLibro {
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 5%;
+  }
 
-  .digital{
-    height: 80%;
-    width: 45%;
-    background-color: #bcebbe63;
-    border-radius: 20px;
-    z-index: 2;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    
+  .prevLibro {
+    flex: 0 0 22%;
+    margin-right: 2rem;
 
-
-    button{
-      z-index: 3;
-      width: 40%;
-      background-color: nth($paleta-colores, 2);
-      height: 80%;
-      color: white;
-      outline: none;
-      border-radius: 20px;
-      border: none;
+    img {
+      max-width: 100%;
+      max-height: auto;
+      border-radius: 10px;
     }
   }
 
+  .descrpLibro {
+    flex-grow: 1;
+    background-color: #ffffff;
+    padding: 2rem;
+    color: #333;
 
-  .fisica{
-    height: 80%;
-    width: 45%;
-    background-color: #bcebbe63;
-    border-radius: 20px;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    
+    .tituloDescripcion {
+      h1 {
+        font-size: clamp(1.75rem, 5vw, 2rem);
+        font-weight: bold;
+        margin-bottom: 0.5rem;
+      }
 
+      h3 {
+        font-size: clamp(1.25rem, 4vw, 1.5rem);
+        color: #555;
+        margin-bottom: 1rem;
+      }
 
-    button{
-      z-index: 3;
-      width: 40%;
-      
-      height: 80%;
-     
-      outline: none;
-      border-radius: 20px;
-      border: none;
+      p, li {
+        font-size: clamp(0.9rem, 2.5vw, 1rem);
+        line-height: 1.5;
+        margin-bottom: 1rem;
+      }
+
+      ul {
+        list-style: none;
+        padding: 0;
+      }
+
+      .etiquetas {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.5rem;
+        margin-bottom: 1.5rem;
+        
+        span {
+          background-color: #ddd;
+          padding: 0.5rem 1rem;
+          border-radius: 20px;
+          font-size: clamp(0.8rem, 2.2vw, 0.9rem);
+          font-weight: 500;
+        }
+      }
+
+      .stars {
+        display: flex;
+        align-items: center;
+        color: #f5a623;
+
+        i {
+          margin-right: 0.3rem;
+        }
+        
+        span {
+          font-size: clamp(0.8rem, 2.2vw, 1rem);
+        }
+      }
     }
 
-    button:not(.btnComprar){
-      
-      background-color: nth($paleta-colores, 2);
-      color: white;
-    }
+    .compra {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 1rem;
+      margin-top: 1rem;
 
-    
+      button {
+        flex: 1;
+        padding: 1rem 1.5rem;
+        border: none;
+        border-radius: 20px;
+        font-size: clamp(0.8rem, 2vw, 1rem);
+        font-weight: 500;
+        transition: background-color 0.3s, color 0.3s;
+        cursor: pointer;
+        &:hover {
+          background-color: nth($paleta-colores, 3);
+          color: nth($paleta-colores, 1);
+        }
+      }
+
+      .btnComprar {
+        background-color: nth($paleta-colores, 1);
+        color: nth($paleta-colores, 2);
+        cursor: pointer;
+
+        &:hover {
+          background-color: nth($paleta-colores, 3);
+          color: nth($paleta-colores, 1);
+        }
+      }
+    }
   }
 }
 
-.btnComprar{
-  background-color: white;
-  color: black;
+// Media queries para ajustar los estilos en dispositivos móviles y tablets
+@include para-tablets-800{
+  .infoLibro {
+    flex-direction: column;
+    align-items: center;
+
+    .prevLibro, .descrpLibro {
+      width: 100%;
+      margin-top: 5rem;
+      margin-right: 0;
+    }
+
+    .prevLibro {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      img {
+        max-width: 50%;
+        height: auto;
+      }
+    }
+
+    .descrpLibro {
+      order: 1;
+    }
+
+    .compra {
+      flex-direction: column;
+      width: 100%;
+
+      button {
+        width: 100%;
+        margin-bottom: 0.5rem;
+      }
+    }
+  }
 }
 
-@media screen and (max-width: 900) {
+@include para-movil {
+  .infoLibro {
+    .prevLibro {
+      img {
+        max-width: 80%;
+        margin-top: 1rem;
+      }
+    }
+
+  }
+}
+
+// Estilos adicionales para dispositivos móviles
+@include para-tablets-900 {
   .libro {
     > article:hover {
       .info {
-        display: inline; ////
+        display: inline;
       }
 
       .btnLibro {
         display: none;
       }
     }
-
  
     .enlaceLibro {
       display: block;
@@ -345,80 +452,7 @@
       }
     }
   }
-}
 
-.infoLibro {
-  width: 100vw;
-  height: 100vh;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-
-  .prevLibro {
-    width: 25vw;
-    height: 50%;
-    background-color: nth($paleta-colores, 3);
-    border-radius: 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.398);
-
-    img{
-      
-      height: 280px;
-    }
-  }
-
-  .descrpLibro {
-    width: 65vw;
-    height: 70%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
-
-    .tituloDescripcion{
-      height: 50%;
-      width: 100%;
-      background-color: nth($paleta-colores, 3);
-      border-radius: 20px;
-      color: white;
-
-      h1{
-        margin: 20px;
-        font-family: $fuente-texto-secundaria;
-      }
-
-      p{
-        font-family: $fuente-texto-secundaria;
-        margin: 20px;
-        font-weight: 100;
-        font-size: 15px;
-      }
-    }
-
-
-    .compra {
-      height: 20%;
-      width: 100%;
-      display: flex;
-     
-      background-color: nth($paleta-colores, 3);
-      border-radius: 20px;
-    }
-
-
-  }
-}
-
-
-
-
-
-//Media Query
-
-@media screen and (max-width: 900) {
   #destacados {
     display: none;
   }
@@ -426,9 +460,11 @@
   #filtros {
     margin-top: 15%;
   }
+
 }
 
-@media screen and (max-width: 720) {
+
+@include para-tablets-850 {
   #contenedorValoracion {
     display: none;
   }
@@ -444,28 +480,17 @@
   }
 }
 
-@media screen and (max-width: 640) {
+@include para-movil {
   #libros {
     width: 45vh;
-  }
-
-  #filtros {
-    margin-top: 18%;
-  }
-}
-
-@media screen and (max-width: 640) {
-  #filtros {
-    position: fixed;
-    margin-top: 21%;
-  }
-
-  #libros {
     margin-top: 35%;
   }
-}
 
-@media screen and (max-width: 500) {
+  #filtros {
+    position: fixed;
+    margin-top: 25%;
+  }
+
   .mostrarCarrito {
     position: fixed;
     width: 70px;
@@ -482,8 +507,3 @@
   }
 }
 
-@media screen and (max-width: 400) {
-  #filtros {
-    margin-top: 20%;
-  }
-}
