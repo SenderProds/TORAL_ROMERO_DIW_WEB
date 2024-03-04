@@ -629,3 +629,10 @@
     margin-top: 3%;
   }
 }
+
+@include para-height-menor-900{
+  #destacados{
+    height: 45vh;
+    margin-top: 3%;
+  }
+}
