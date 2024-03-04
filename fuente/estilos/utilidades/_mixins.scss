@@ -17,10 +17,22 @@
     }
 }
 
+@mixin para-height-menor-800 {
+    @media screen and (height < 800px)  {
+        @content;
+    }
+}
 
+
+
+@mixin para-height-menor-800 {
+    @media screen and (max-width: 2000px)  and (height < 800){
+        @content;
+    }
+}
 
 @mixin para-pantallas-2000 {
-    @media screen and (max-width: 2000px) {
+    @media screen and (max-width: 2000px)  and (height > 800){
         @content;
     }
 }
