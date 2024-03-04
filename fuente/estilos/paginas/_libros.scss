@@ -605,14 +605,61 @@
 
 @include para-menor-850-1000{
   #filtros {
-    position: fixed;
+    
     margin-top: 20%;
   }
 }
 
 @include para-menor-650-1000{
   #filtros {
+    
+    margin-top: 42%;
+  }
+}
+
+
+@include para-tablets-1000{
+  #filtros{
+    
+    margin-top: 15%;
+  }
+}
+
+
+
+@include para-tablets-900{
+  #filtros{
+    
+    margin-top: 20%;
+  }
+}
+
+
+@include para-tablets-700{
+  #filtros{
+    
+    margin-top: 23%;
+  }
+}
+
+@include para-tablets-600{
+  #filtros{
     position: fixed;
-    margin-top: 40%;
+    margin-top: 30%;
+  }
+}
+
+
+@include para-tablets-500{
+  #filtros{
+    position: fixed;
+    margin-top: 32%;
+  }
+}
+
+@include para-tablets-400{
+  #filtros{
+    position: fixed;
+    margin-top: 38%;
   }
 }

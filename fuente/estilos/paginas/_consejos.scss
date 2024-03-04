@@ -134,4 +134,18 @@
     }
   }
   
+
+  @include para-tablets-900{
+    #titulo{
+       height: 5vh; 
+    }
+  }
+
+
+  @include para-tablets-800{
+    #titulo{
+       height: 10vh; 
+    }
+  }
+  
   
