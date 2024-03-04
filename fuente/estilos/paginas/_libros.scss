@@ -377,7 +377,6 @@
 // Media queries para ajustar los estilos en dispositivos móviles y tablets
 
 
-
 @include para-tablets-800{
   .infoLibro {
 
@@ -468,7 +467,6 @@
 
 }
 
-
 @include para-pantallas-1100{
   #destacados {
     display: none;
@@ -528,7 +526,7 @@
 @include pantallas-900-2000{
   #filtros {
     position: fixed;
-    margin-top: 15%;
+    margin-top: 14%;
   }
 
   #libros {
@@ -616,19 +614,5 @@
   #filtros {
     position: fixed;
     margin-top: 40%;
-  }
-}
-
-@include para-height-menor-800{
-  #destacados{
-    height: 45vh;
-    margin-top: 3%;
-  }
-}
-
-@include para-height-menor-900{
-  #destacados{
-    height: 45vh;
-    margin-top: 3%;
   }
 }

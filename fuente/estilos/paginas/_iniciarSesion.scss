@@ -253,3 +253,21 @@
     margin-top: 12%;
   }
 }
+
+
+@media screen and (max-width: 1900px) and (max-height: 500px)and (orientation: landscape){
+  header {
+    height: 16%;
+    
+    
+  }
+  .menu button{
+    height: 50px;
+  }
+
+  .menu ul li {
+    height: 50px;
+    width: 100%;
+  }
+  
+}
