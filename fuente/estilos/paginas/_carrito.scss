@@ -195,6 +195,7 @@
 @include pantallas-2000-2000{
   #titulo{
       margin-top: 3%;
+      height: 15vh;
   }
 }
 
@@ -208,6 +209,7 @@
 @include pantallas-900-2000{
   #titulo{
       margin-top: 12%;
+      height: 10vh;
   }
 }
 
@@ -217,6 +219,7 @@
 @include pantallas-800-2000{
   #titulo{
       margin-top: 10%;
+      
   }
 }
 
@@ -237,7 +240,7 @@
 
 @include pantallas-400-2000{
   #titulo{
-      margin-top: 5%;
+      margin-top: 20%;
   }
 }
 
