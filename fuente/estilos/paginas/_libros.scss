@@ -376,11 +376,7 @@
 
 // Media queries para ajustar los estilos en dispositivos móviles y tablets
 
-@include para-pantallas-2000{
-  .infoLibro{
-    height: 100vh;
-  }
-}
+
 
 @include para-tablets-800{
   .infoLibro {
@@ -478,7 +474,7 @@
   }
 
   #filtros {
-    margin-top: 15%;
+    margin-top: 14%;
   }
 
 }
