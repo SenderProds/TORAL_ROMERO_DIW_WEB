@@ -241,3 +241,15 @@
     }
   }
 }
+
+@include para-movil{
+  #cuenta{
+    margin-top: 15%;
+  }
+}
+
+@include para-tablets-600{
+  #cuenta{
+    margin-top: 12%;
+  }
+}

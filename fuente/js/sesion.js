@@ -1,20 +1,20 @@
 let formularioSesion = document.getElementById("formSesion");
 let btnSesion = document.getElementById('btnSesion');
 
-if(formularioSesion){
+if (formularioSesion) {
     formularioSesion.addEventListener('submit', (e) => {
-    e.preventDefault();
-    let user = document.getElementById('user').value;
-    let password = document.getElementById('password').value;
+        e.preventDefault();
+        let user = document.getElementById('user').value;
+        let password = document.getElementById('password').value;
 
-    let objeto = {
-        user: user,
-        password: password
-    }
+        let objeto = {
+            user: user,
+            password: password
+        }
 
-    localStorage.setItem("sesion", JSON.stringify(objeto));
-    comprobarSesion();
-});
+        localStorage.setItem("sesion", JSON.stringify(objeto));
+        comprobarSesion();
+    });
 
 }
 
@@ -26,10 +26,10 @@ if(formularioSesion){
 function comprobarSesion() {
     if (localStorage.getItem('sesion')) {
         btnSesion.textContent = "CUENTA";
-        if(document.getElementById("contenidoLogin")){
+        if (document.getElementById("contenidoLogin")) {
             document.getElementById("contenidoLogin").classList.add("ocultar");
             document.getElementById("cuenta").classList.add("df-column");
-            
+
             document.getElementById("cuenta").classList.remove("ocultar");
             document.getElementById("cuenta").classList.add("cuenta");
             document.getElementById("cerrarSesion").addEventListener('click', (e) => {
@@ -40,18 +40,22 @@ function comprobarSesion() {
 
         }
     } else {
-        if(document.getElementById("contenidoLogin").classList.contains("ocultar")){
-            document.getElementById("cuenta").classList.add("ocultar");
-            document.getElementById("cuenta").classList.remove("df-column");
-            document.getElementById("contenidoLogin").classList.remove("ocultar")
-            
-        }else{
-            document.getElementById("cuenta").classList.add("ocultar");
-            document.getElementById("cuenta").classList.remove("cuenta");
-            document.getElementById("contenidoLogin").classList.remove("ocultar")
+
+        if (document.getElementById("contenidoLogin")) {
+            if (document.getElementById("contenidoLogin").classList.contains("ocultar")) {
+                document.getElementById("cuenta").classList.add("ocultar");
+                document.getElementById("cuenta").classList.remove("df-column");
+                document.getElementById("contenidoLogin").classList.remove("ocultar")
+
+            } else {
+                document.getElementById("cuenta").classList.add("ocultar");
+                document.getElementById("cuenta").classList.remove("cuenta");
+                document.getElementById("contenidoLogin").classList.remove("ocultar")
 
 
+            }
         }
+
         btnSesion.textContent = "INICIAR SESION";
     }
 }

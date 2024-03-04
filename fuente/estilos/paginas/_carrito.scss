@@ -1,178 +1,243 @@
 .carrito-contenedor {
-    height: 100vh;
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: flex-start;
+  background: #f0f0f0; // Color de fondo ajustable
+  padding-top: 2rem; // Espacio superior
+  padding-bottom: 2rem; // Espacio inferior
+  box-sizing: border-box;
+
+  #productos {
+    width: 60%;
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    align-items: flex-start;
-    background: #f0f0f0; // Color de fondo ajustable
-    padding-top: 2rem; // Espacio superior
-    padding-bottom: 2rem; // Espacio inferior
-    box-sizing: border-box;
-  
-    #productos {
-      width: 60%;
+    flex-direction: column;
+    align-items: center;
+    // Permite el desplazamiento si hay muchos productos
+
+    .producto {
       display: flex;
-      flex-direction: column;
+      width: 90%; // Para usar todo el espacio disponible
+      justify-content: space-between; // Distribuir el espacio uniformemente
       align-items: center;
-      // Permite el desplazamiento si hay muchos productos
-  
-      .producto {
-        display: flex;
-        width: 90%; // Para usar todo el espacio disponible
-        justify-content: space-between; // Distribuir el espacio uniformemente
-        align-items: center;
-        margin-bottom: 2rem; // Espacio entre productos
-        background-color: #fff; // Fondo de cada producto
-        border-radius: 10px; // Bordes redondeados
-        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); // Sombra suave
-        padding: 10px;
-        
-  
-        img {
-          height: auto;
-          max-width: 120px; // Tamaño máximo para la imagen
-        }
-  
-        .producto-info {
-          flex-grow: 1;
-          padding: 0 1rem;
-  
-          p {
-            margin: 0;
-            &:first-child {
-              font-weight: bold;
-              margin-bottom: 0.5rem;
-            }
+      margin-bottom: 2rem; // Espacio entre productos
+      background-color: #fff; // Fondo de cada producto
+      border-radius: 10px; // Bordes redondeados
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); // Sombra suave
+      padding: 10px;
+
+
+      img {
+        height: auto;
+        max-width: 120px; // Tamaño máximo para la imagen
+      }
+
+      .producto-info {
+        flex-grow: 1;
+        padding: 0 1rem;
+
+        p {
+          margin: 0;
+
+          &:first-child {
+            font-weight: bold;
+            margin-bottom: 0.5rem;
           }
         }
-  
-        .quitar-producto {
-          background-color: #c0392b; // Color para el botón de quitar
-          color: white;
-          border: none;
-          border-radius: 20px;
-          padding: 0.5rem 1rem;
-          cursor: pointer;
-          
-  
-          &:hover {
-            background-color: darken(#c0392b, 10%);
-          }
+      }
+
+      .quitar-producto {
+        background-color: #c0392b; // Color para el botón de quitar
+        color: white;
+        border: none;
+        border-radius: 20px;
+        padding: 0.5rem 1rem;
+        cursor: pointer;
+
+
+        &:hover {
+          background-color: darken(#c0392b, 10%);
         }
       }
     }
-  
-    #compra {
-      width: 35%; // Ajusta el ancho de la sección de compra
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      padding: 1rem;
-      background-color: #fff; // Fondo para la sección de compra
-      border-radius: 10px; // Bordes redondeados para la sección de compra
-      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); // Sombra suave
-  
-      .total-pagar {
-        font-size: 1.5rem;
-        font-weight: bold;
-        margin-bottom: 1rem;
-      }
-  
-      .codigo-promocional {
-        width: 100%;
-        margin-bottom: 1rem;
-  
-        label {
-          display: block;
-          margin-bottom: 0.5rem;
-        }
-  
-        input[type="text"] {
-          width: calc(100% - 20px);
-          padding: 0.5rem;
-          margin-bottom: 1rem;
-        }
-  
-        button {
-          width: 100%;
-          padding: 0.75rem 0;
-          background-color: nth($paleta-colores, 1); // Color ajustable para el botón
-          color: nth($paleta-colores, 2);
-          border-radius: 20px;
-          cursor: pointer;
-          
-  
-          &:hover {
-            background-color: nth($paleta-colores, 2);
-            color: nth($paleta-colores, 1);
+  }
 
-          }
-        }
+  #compra {
+    width: 35%; // Ajusta el ancho de la sección de compra
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #fff; // Fondo para la sección de compra
+    border-radius: 10px; // Bordes redondeados para la sección de compra
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); // Sombra suave
+
+    .total-pagar {
+      font-size: 1.5rem;
+      font-weight: bold;
+      margin-bottom: 1rem;
+    }
+
+    .codigo-promocional {
+      width: 90%;
+      margin-bottom: 1rem;
+
+      label {
+        display: block;
+        margin-bottom: 0.5rem;
       }
-  
-      .realizar-pedido {
-        padding: 0.75rem 0;
+
+      input[type="text"] {
+        width: calc(100% - 20px);
+        padding: 0.5rem;
+        margin-bottom: 1rem;
+      }
+
+      button {
         width: 100%;
-        background-color: nth($paleta-colores, 2); // Color ajustable para el botón principal
-        color: white;
+        padding: 0.75rem 0;
+        background-color: nth($paleta-colores, 1); // Color ajustable para el botón
+        color: nth($paleta-colores, 2);
         border-radius: 20px;
         cursor: pointer;
-        
-  
-        &:hover {
-          background-color: nth($paleta-colores, 1);
-          color: nth($paleta-colores, 2);
-        }
-      }
-    }
-  }
-  
-  @include para-tablets-800{
-    .carrito-contenedor {
-      padding-top: 1rem;
-      padding-bottom: 1rem;
-  
-      #productos,
-      #compra {
-        width: 100%;
-        max-width: 100%;
-        margin-top: 1rem;
-      }
-    }
-  }
-  
-  @media (max-width: 480px) {
 
-     
-    .carrito-contenedor {
-      flex-direction: column;
-      align-items: center;
-  
-      #productos,
-      #compra {
-        width: 100%;
-        margin-top: 1rem;
-        box-shadow: none; // Puede ser opcional si prefieres sin sombra en dispositivos móviles
-  
-        .producto {
-          flex-direction: column;
-          align-items: center;
-  
-          .producto-info {
-            order: 2; // Asegura que la información del producto se muestre debajo de la imagen
-            text-align: center; // Centra el texto para dispositivos móviles
-          }
-  
-          .quitar-producto {
-            order: 3; // El botón para quitar el producto al final
-          }
+
+        &:hover {
+          background-color: nth($paleta-colores, 2);
+          color: nth($paleta-colores, 1);
+
         }
       }
-  
-      .total-pagar,
-      .codigo-promocional,
-      .realizar-pedido {
-        width: 90%; // Un poco menos de ancho para permitir margen a los lados
+    }
+
+    .realizar-pedido {
+      padding: 0.75rem 0;
+      width: 90%;
+      background-color: nth($paleta-colores, 2); // Color ajustable para el botón principal
+      color: white;
+      border-radius: 20px;
+      cursor: pointer;
+
+
+      &:hover {
+        background-color: nth($paleta-colores, 1);
+        color: nth($paleta-colores, 2);
       }
     }
   }
+}
+
+@include para-mayor-900-600 {
+  .carrito-contenedor {
+    height: 100vh;
+  }
+}
+
+@include para-tablets-800 {
+  .carrito-contenedor {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+
+    #productos,
+    #compra {
+      width: 100%;
+      max-width: 100%;
+      margin-top: 1rem;
+    }
+  }
+}
+
+@include para-tablets-600 {
+
+
+  .carrito-contenedor {
+
+    flex-direction: column;
+    align-items: center;
+
+    #productos,
+    #compra {
+      width: 100%;
+      margin-top: 1rem;
+      box-shadow: none; // Puede ser opcional si prefieres sin sombra en dispositivos móviles
+
+      .producto {
+        flex-direction: column;
+        align-items: center;
+
+        .producto-info {
+          order: 2; // Asegura que la información del producto se muestre debajo de la imagen
+          text-align: center; // Centra el texto para dispositivos móviles
+        }
+
+        .quitar-producto {
+          order: 3; // El botón para quitar el producto al final
+        }
+      }
+    }
+
+    .total-pagar,
+    .codigo-promocional,
+    .realizar-pedido {
+      width: 90%; // Un poco menos de ancho para permitir margen a los lados
+    }
+  }
+}
+
+
+
+@include pantallas-3000-2000{
+  #titulo{
+      margin-top: 3%;
+  }
+}
+
+@include pantallas-2000-2000{
+  #titulo{
+      margin-top: 3%;
+  }
+}
+
+@include pantallas-1500-1500{
+  #titulo{
+      margin-top: 4%;
+  }
+}
+
+
+@include pantallas-900-2000{
+  #titulo{
+      margin-top: 12%;
+  }
+}
+
+
+
+
+@include pantallas-800-2000{
+  #titulo{
+      margin-top: 10%;
+  }
+}
+
+
+@include pantallas-600-2000{
+  #titulo{
+      margin-top: 10%;
+  }
+}
+
+
+@include pantallas-500-2000{
+  #titulo{
+      margin-top: 19%;
+  }
+}
+
+
+@include pantallas-400-2000{
+  #titulo{
+      margin-top: 5%;
+  }
+}
+

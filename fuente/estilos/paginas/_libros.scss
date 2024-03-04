@@ -105,7 +105,7 @@
 #libros {
   width: 90vw;
   margin-top: 10px;
-  grid-template-columns: repeat(auto-fit, minmax(17em, 5fr));
+  grid-template-columns: repeat(auto-fit, minmax(20em, 4fr));
   grid-gap: 2rem;
   justify-items: center;
   margin-bottom: 10px;
@@ -253,6 +253,7 @@
 
 // Estilos para la información detallada del libro
 .infoLibro {
+  
   display: flex;
   justify-content: center;
   align-items: flex-start;
@@ -374,14 +375,22 @@
 }
 
 // Media queries para ajustar los estilos en dispositivos móviles y tablets
+
+@include para-pantallas-2000{
+  .infoLibro{
+    height: 100vh;
+  }
+}
+
 @include para-tablets-800{
   .infoLibro {
+
     flex-direction: column;
     align-items: center;
 
     .prevLibro, .descrpLibro {
       width: 100%;
-      margin-top: 5rem;
+      margin-top: 15%;
       margin-right: 0;
     }
 
@@ -391,6 +400,7 @@
       align-items: center;
 
       img {
+        margin-top: 10%;
         max-width: 50%;
         height: auto;
       }
@@ -414,10 +424,12 @@
 
 @include para-movil {
   .infoLibro {
+    margin-top: 20%;
+
     .prevLibro {
       img {
         max-width: 80%;
-        margin-top: 1rem;
+        margin-top: 20%;
       }
     }
 
@@ -453,6 +465,14 @@
     }
   }
 
+  
+  #filtros {
+    margin-top: 15%;
+  }
+
+}
+
+@include para-pantallas-1100{
   #destacados {
     display: none;
   }
@@ -482,7 +502,7 @@
 
 @include para-movil {
   #libros {
-    width: 45vh;
+    
     margin-top: 35%;
   }
 
@@ -507,3 +527,97 @@
   }
 }
 
+
+@include pantallas-900-2000{
+  #filtros {
+    position: fixed;
+    margin-top: 15%;
+  }
+
+  #libros {
+    
+    margin-top: 35%;
+  }
+}
+
+
+
+
+@include pantallas-800-2000{
+  #filtros {
+    position: fixed;
+    margin-top: 15%;
+  }
+
+  #libros {
+    
+    margin-top: 38%;
+  }
+}
+
+
+@include pantallas-600-2000{
+  #filtros {
+    position: fixed;
+    margin-top: 20%;
+  }
+
+  #libros {
+    
+    margin-top: 40%;
+  }
+}
+
+
+@include pantallas-500-2000{
+  #filtros {
+    position: fixed;
+    margin-top: 25%;
+  }
+
+  #libros {
+    
+    margin-top: 69%;
+  }
+}
+
+
+@include pantallas-400-2000{
+  #filtros {
+    position: fixed;
+    margin-top: 30%;
+  }
+
+  #libros {
+    
+    margin-top: 75%;
+  }
+}
+
+
+
+@include para-tablets-800{ /* Ajusta este valor al punto de ruptura que necesites */
+  #libros {
+    grid-template-columns: 1fr; /* Hace que solo haya una columna */
+  }
+}
+
+@include para-pantallas-anchas-bajas-1000-700{
+  #destacados{
+    height: 40vh;
+  }
+}
+
+@include para-menor-850-1000{
+  #filtros {
+    position: fixed;
+    margin-top: 20%;
+  }
+}
+
+@include para-menor-650-1000{
+  #filtros {
+    position: fixed;
+    margin-top: 40%;
+  }
+}
