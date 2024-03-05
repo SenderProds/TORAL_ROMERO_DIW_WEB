@@ -91,7 +91,7 @@ footer {
 
 // Menú para tablets y dispositivos móviles
 
-@include para-tablets-900{
+@include para-tablets-1000{
   .abrir-menu,
   .cerrar-menu {
     border: 0;

@@ -32,6 +32,11 @@
     }
 }
 
+@mixin para-tablets-1000 {
+    @media screen and (max-width: 1000px) {
+        @content;
+    }
+}
 
 @mixin para-tablets-900 {
     @media screen and (max-width: 900px) {
