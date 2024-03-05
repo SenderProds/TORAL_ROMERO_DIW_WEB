@@ -1,7 +1,6 @@
 // Estilos del título
 #titulo{
     width: 100%;
-    height: 180px;
     background-color: nth($paleta-colores, 3);
 
     > h1{
@@ -17,7 +16,7 @@
 
     // Estilos de los videos
     .videos {
-        margin-top: 3%;
+        margin-top: 4%;
         height: 80%;
         width: 90%;
         display: grid;
@@ -27,8 +26,8 @@
 
         // Estilos de cada video
         .video {
-            height: 200px;
-            width: 355px;
+            height: 193px;
+            width: 345px;
             display: flex;
             flex-direction: column;
             justify-content: end;
@@ -37,7 +36,7 @@
 
             >img {
                 position: absolute;
-                height: 200px;
+                height: 193px;
                 border-radius: 20px;
                 filter: blur(1.5px);
             }
@@ -69,6 +68,7 @@
                 background-color: rgba(255, 255, 255, 0.76);
                 border-radius: 15px;
                 bottom: 4px;
+
                 p{
                     margin: 10px;
                 }
@@ -80,7 +80,7 @@
             cursor: pointer;
             >img {
                 position: absolute;
-                height: 220px;
+                height: 205px;
                 transition: cubic-bezier(0.785, 0.135, 0.15, 0.86) .2s;
                 z-index: 2;
                 box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.356);
@@ -96,7 +96,7 @@
                 display: block;
                 background-color: rgba(0, 0, 0, 0.596);
                 box-shadow: 0px 0px 10px 2px rgba(255, 255, 255, 0.356);
-                z-index: 4;
+                z-index: 2;
                 text-align: center;
                 >p{
                     margin: 10px;

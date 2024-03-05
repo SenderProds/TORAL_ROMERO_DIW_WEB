@@ -7,7 +7,7 @@ body {
   height: 100vh;
 }
 
-@media screen and (max-width: 800px) {
+@include para-tablets-800{
   body {
     width: 100%;
     

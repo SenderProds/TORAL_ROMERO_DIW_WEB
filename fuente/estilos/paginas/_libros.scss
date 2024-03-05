@@ -44,7 +44,6 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin-top: 5%;
   color: white;
 
   > div {
@@ -385,7 +384,6 @@
 
     .prevLibro, .descrpLibro {
       width: 100%;
-      margin-top: 15%;
       margin-right: 0;
     }
 
@@ -395,7 +393,6 @@
       align-items: center;
 
       img {
-        margin-top: 10%;
         max-width: 50%;
         height: auto;
       }
@@ -419,12 +416,10 @@
 
 @include para-movil {
   .infoLibro {
-    margin-top: 20%;
 
     .prevLibro {
       img {
         max-width: 80%;
-        margin-top: 20%;
       }
     }
 
@@ -460,22 +455,18 @@
     }
   }
 
-  
-  #filtros {
-    margin-top: 15%;
-  }
-
 }
 
 @include para-pantallas-1100{
   #destacados {
     display: none;
   }
+}
 
-  #filtros {
-    margin-top: 14%;
+@include para-height-750{
+  #destacados {
+    display: none;
   }
-
 }
 
 
@@ -492,10 +483,7 @@
 }
 
 @include para-movil {
-  #libros {
-    
-    margin-top: 35%;
-  }
+
 
 
   .mostrarCarrito {
