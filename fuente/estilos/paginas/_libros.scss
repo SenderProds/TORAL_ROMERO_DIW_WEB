@@ -488,11 +488,7 @@
     display: none;
   }
 
-  #filtros {
-    width: 50%;
-    cursor: pointer;
-    box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.293);
-  }
+
 }
 
 @include para-movil {
@@ -501,10 +497,6 @@
     margin-top: 35%;
   }
 
-  #filtros {
-    position: fixed;
-    margin-top: 25%;
-  }
 
   .mostrarCarrito {
     position: fixed;
@@ -523,143 +515,4 @@
 }
 
 
-@include pantallas-900-2000{
-  #filtros {
-    position: fixed;
-    margin-top: 14%;
-  }
 
-  #libros {
-    
-    margin-top: 35%;
-  }
-}
-
-
-
-
-@include pantallas-800-2000{
-  #filtros {
-    position: fixed;
-    margin-top: 15%;
-  }
-
-  #libros {
-    
-    margin-top: 38%;
-  }
-}
-
-
-@include pantallas-600-2000{
-  #filtros {
-    position: fixed;
-    margin-top: 20%;
-  }
-
-  #libros {
-    
-    margin-top: 40%;
-  }
-}
-
-
-@include pantallas-500-2000{
-  #filtros {
-    position: fixed;
-    margin-top: 25%;
-  }
-
-  #libros {
-    
-    margin-top: 69%;
-  }
-}
-
-
-@include pantallas-400-2000{
-  #filtros {
-    position: fixed;
-    margin-top: 30%;
-  }
-
-  #libros {
-    
-    margin-top: 75%;
-  }
-}
-
-
-
-@include para-tablets-800{ /* Ajusta este valor al punto de ruptura que necesites */
-  #libros {
-    grid-template-columns: 1fr; /* Hace que solo haya una columna */
-  }
-}
-
-@include para-pantallas-anchas-bajas-1000-700{
-  #destacados{
-    height: 40vh;
-  }
-}
-
-@include para-menor-850-1000{
-  #filtros {
-    
-    margin-top: 20%;
-  }
-}
-
-@include para-menor-650-1000{
-  #filtros {
-    
-    margin-top: 42%;
-  }
-}
-
-
-@include para-tablets-1000{
-  #filtros{
-    
-    margin-top: 15%;
-  }
-}
-
-
-
-@include para-tablets-900{
-  #filtros{
-    
-    margin-top: 20%;
-  }
-}
-
-
-@include para-tablets-700{
-  #filtros{
-    
-    margin-top: 23%;
-  }
-}
-
-@include para-tablets-600{
-  #filtros{
-    position: fixed;
-    margin-top: 30%;
-  }
-}
-
-
-@include para-tablets-500{
-  #filtros{
-    position: fixed;
-    margin-top: 32%;
-  }
-}
-
-@include para-tablets-400{
-  #filtros{
-    position: fixed;
-    margin-top: 38%;
-  }
-}
